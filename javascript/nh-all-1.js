@@ -108,7 +108,10 @@ function addTd(tr, src, text, title) {
 function add_4k() {
     document.querySelectorAll("img").forEach(e => {
         if (e.src == "https://newheaven.nl/images/categories/9/2_109.gif") {
-            e.src = "https://newheaven.nl/files/imagecache/63726_2_8_4k.gif";
+            e.src = "https://newheaven.nl/files/imagecache/63726_29907_2160p.png";
+        }
+        if (e.src == "https://newheaven.nl/images/categories/9/4_110.gif") {
+            e.src = "https://newheaven.nl/files/imagecache/63726_29907_2160p_TV.png";
         }
     });
 }
