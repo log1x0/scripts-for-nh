@@ -125,7 +125,7 @@ function addPepe() {
         "https://newheaven.nl/files/imagecache/63733_pepe-153.gif",
         "https://newheaven.nl/files/imagecache/63733_pepe-154.gif",
         "https://newheaven.nl/files/imagecache/63733_pepe-155.gif",
-        "https://newheaven.nl/files/imagecache/63733_pepe-156.gif"
+        "https://newheaven.nl/files/imagecache/63733_pepe-156.gif",
         "https://newheaven.nl/files/imagecache/63733_pepe-094.gif"
     ], [
         "https://newheaven.nl/files/imagecache/63733_pepe-109.gif",
