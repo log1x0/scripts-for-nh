@@ -110,7 +110,13 @@ function addPepe() {
         "https://newheaven.nl/files/imagecache/63733_pepe-094.gif"
     ], [
         "https://newheaven.nl/files/imagecache/63733_pepe-109.gif",
-        "https://newheaven.nl/files/imagecache/63733_pepe-117.gif"
+        "https://newheaven.nl/files/imagecache/63733_pepe-117.gif",
+        "https://newheaven.nl/files/imagecache/63733_pepe-160.gif",
+        "https://newheaven.nl/files/imagecache/63733_pepe-161.gif",
+        "https://newheaven.nl/files/imagecache/63733_pepe-163.gif",
+        "https://newheaven.nl/files/imagecache/63733_pepe-164.gif",
+        "https://newheaven.nl/files/imagecache/63733_pepe-165.gif",
+        "https://newheaven.nl/files/imagecache/63733_pepe-159.gif"
 
     ]];
     let std = document.querySelector('[title=":)"]');
