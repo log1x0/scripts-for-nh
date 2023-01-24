@@ -171,7 +171,9 @@ function addPepe() {
         let title_index = 1;
         for (let i = 0; i < links.length; i++) {
             const row_e = links[i];
+            tb.appendChild(document.createElement("tr"));
             let tr = document.createElement("tr");
+            tr.style.height = "30px";
             // tr.appendChild(document.createElement("td"));
             for (let j = 0; j < row_e.length; j++) {
                 const col_e = row_e[j];
@@ -199,6 +201,8 @@ function getNthParent(elem, i) {
 function addTd(tr, src, text, title) {
     let td = document.createElement("td");
     let img = document.createElement("img");
+    td.style.textAlign = "center";
+    td.style.verticalAlign = "middle";
     img.src = src;
     img.width = 20;
     img.height = 20;
