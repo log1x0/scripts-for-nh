@@ -13,6 +13,7 @@
     'use strict';
     setStyle();
     addPepe();
+    addSwitch(0);
     add_4k();
 })();
 
@@ -173,7 +174,7 @@ function addPepe() {
             const row_e = links[i];
             tb.appendChild(document.createElement("tr"));
             let tr = document.createElement("tr");
-            tr.style.height = "30px";
+            // tr.style.height = "30px";
             // tr.appendChild(document.createElement("td"));
             for (let j = 0; j < row_e.length; j++) {
                 const col_e = row_e[j];
@@ -188,6 +189,44 @@ function addPepe() {
     }
 }
 
+function addSwitch(mode) {
+    let std = document.querySelector('[title=":)"]');
+    let tbl = getNthParent(std, 4);
+    if (tbl != null) {
+        let rows = tbl.rows;
+        let r = rows[rows.length - 1];
+        let c = r.insertCell(-1);
+
+        let a = document.createElement("a");
+        a.href = "#";
+        if (mode == 0) {
+            a.text = "hide";
+            a.addEventListener("click", sw1);
+        } else {
+            a.text = "show";
+            a.addEventListener("click", sw2);
+        }
+        c.appendChild(a);
+    }
+}
+
+function sw1() {
+    console.log("switch 1");
+    let std = document.querySelector('[title=":)"]');
+    let tbl = getNthParent(std, 4);
+    if (tbl != null) {
+        while (tbl.rows.length > 2) {
+            tbl.deleteRow(-1);
+        }
+        addSwitch(1);
+    }
+}
+
+function sw2() {
+    console.log("switch 2");
+    location.reload();
+}
+
 function getNthParent(elem, i) {
     if (elem == null) {
         return null;
@@ -195,7 +234,7 @@ function getNthParent(elem, i) {
     if (i <= 0) {
         return elem;
     }
-    return getNthParent(elem.parentElement, i - 1);
+    return getNthParent(elem.parentNode, i - 1);
 }
 
 function addTd(tr, src, text, title) {
