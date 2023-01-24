@@ -31,7 +31,7 @@ function setStyle() {
     // document.querySelectorAll("font, td").forEach(e => { e.style.fontSize = "9pt" });
 }
 
-function addPepe(showsVal) {
+function addPepe() {
     let links = [
         [
             "https://newheaven.nl/files/imagecache/63726_pepe-001.gif",
