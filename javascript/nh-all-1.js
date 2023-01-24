@@ -173,6 +173,7 @@ function addPepe() {
             const row_e = links[i];
             tb.appendChild(document.createElement("tr"));
             let tr = document.createElement("tr");
+            tr.style.height = "30px";
             // tr.appendChild(document.createElement("td"));
             for (let j = 0; j < row_e.length; j++) {
                 const col_e = row_e[j];
