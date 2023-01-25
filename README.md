@@ -2,7 +2,7 @@
 
 Tampermonkey scripts for NH.
 
-***
+---
 
 Choose the script you want to use from `javascript` and copy it ('Copy raw contents'):
 

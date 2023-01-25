@@ -10,19 +10,29 @@
 // ==/UserScript==
 
 (function () {
-    'use strict';
-    setStyle();
+  "use strict";
+  setStyle();
 })();
 
 function setStyle() {
-    // let color1 = "#181818";
-    let color1 = "SlateGray";
-    let color2 = "LightGray";
-    let color3 = "#DDCCBB";
-    document.body.style.backgroundColor = color1;
-    document.querySelectorAll(".column1, .column2").forEach(e => { e.style.background = color1 });
-    document.querySelectorAll("td").forEach(e => { e.style.color = color2 });
-    document.querySelectorAll("a, font").forEach(e => { e.style.color = color3 });
-    document.querySelectorAll(".user_class, .vip_class").forEach(e => { e.style.color = color3 });
-    document.querySelectorAll(".framecorner, .framebar").forEach(e => { e.style.backgroundImage = "none" });
+  // let color1 = "#181818";
+  let color1 = "SlateGray";
+  let color2 = "LightGray";
+  let color3 = "#DDCCBB";
+  document.body.style.backgroundColor = color1;
+  document.querySelectorAll(".column1, .column2").forEach((e) => {
+    e.style.background = color1;
+  });
+  document.querySelectorAll("td").forEach((e) => {
+    e.style.color = color2;
+  });
+  document.querySelectorAll("a, font").forEach((e) => {
+    e.style.color = color3;
+  });
+  document.querySelectorAll(".user_class, .vip_class").forEach((e) => {
+    e.style.color = color3;
+  });
+  document.querySelectorAll(".framecorner, .framebar").forEach((e) => {
+    e.style.backgroundImage = "none";
+  });
 }
