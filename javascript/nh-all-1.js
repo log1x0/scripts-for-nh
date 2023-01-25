@@ -185,7 +185,7 @@ function addPepe() {
 
     let ifr = this.window.top.document.querySelector('[name="shoutbox"]');
     if (ifr != null) {
-        ifr.setAttribute("height", parseInt(ifr.getAttribute("height")) + 75);
+        ifr.setAttribute("height", "750");
     }
 }
 
