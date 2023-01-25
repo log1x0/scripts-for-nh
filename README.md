@@ -1,15 +1,13 @@
-# NhScripts
+# scripts-for-nh
 
 Tampermonkey scripts for NH.
 
----
+## Installation / How-To:
 
-Choose the script you want to use from `javascript` and copy it ('Copy raw contents'):
+1. Wechsle in den Ordner [javascript](scripts-for-nh/tree/main/javascript) und wähle das gewünschte Script aus. Alle Scripte sind in [nh-all-1.js](scripts-for-nh/blob/main/javascript/nh-all-1.js) zusammengefasst.
 
-![image](https://user-images.githubusercontent.com/107345625/175505044-c9bd32e0-cc8b-42f0-b1d0-bf5b39ead0be.png)
+2. Kopiere den Script-Text in die Zwischenablage. Öffne dafür den Raw-Textinhalt.
 
-Switch to NH and create a new user script in Tampermonkey.
+3. Installiere das Browser-Addon Tampermonkey, wechsle zur NH-Seite, klicke auf "Neues Userscript erstellen", ersetze den Text in dem sich öffnenden Editor durch die Zwischenablage, drücke <kbd>Strg</kbd> + <kbd>S</kbd> zum Speichern und lade die NH-Seite schließlich neu.
 
-Delete the predefined script text and paste the script from the clipboard.
-
-Save the script with <kbd>Ctrl</kbd> + <kbd>S</kbd>, it will be activated automatically.
+4. Dieses Repository wird gelegentlich aktualisiert. Wenn du es unterstützen möchtest, melde dich bei mir.
