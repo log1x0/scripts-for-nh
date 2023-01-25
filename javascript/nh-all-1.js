@@ -141,6 +141,10 @@ const links = [
     [
         "https://newheaven.nl/files/imagecache/63733_pepe-165.gif",
         "https://newheaven.nl/files/imagecache/63733_pepe-159.gif",
+        "https://newheaven.nl/files/imagecache/63837_piratenboot.gif",
+        "https://newheaven.nl/files/imagecache/60835_na6otob9r4t.gif",
+        "https://newheaven.nl/files/imagecache/60835_jo6a6witkjw.gif",
+        "https://newheaven.nl/files/imagecache/60835_brbngzd0q4c.gif",
     ]
 ];
 
@@ -184,6 +188,7 @@ function swapInput() {
 
 function addPepe() {
     showPepe();
+    hidePepe();
 }
 
 function showPepe() {
