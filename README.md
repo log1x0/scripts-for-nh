@@ -4,7 +4,7 @@ Tampermonkey scripts for NH.
 
 ## Installation / How-To:
 
-1. Wechsle in den Ordner [javascript](scripts-for-nh/tree/main/javascript) und wähle das gewünschte Script aus. Alle Scripte sind in [nh-all-1.js](scripts-for-nh/blob/main/javascript/nh-all-1.js) zusammengefasst.
+1. Wechsle in den Ordner [javascript](javascript) und wähle das gewünschte Script aus. Alle Scripte sind in [nh-all-1.js](javascript/nh-all-1.js) zusammengefasst.
 
 2. Kopiere den Script-Text in die Zwischenablage. Öffne dafür den Raw-Textinhalt.
 
