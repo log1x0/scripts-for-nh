@@ -144,6 +144,10 @@ const links = [
     ]
 ];
 
+let table1 = null;
+let table2 = null;
+let standardHeight = null;
+
 (function () {
     'use strict';
     setStyle();
@@ -179,13 +183,79 @@ function swapInput() {
 }
 
 function addPepe() {
-    addSwitch(0, 1);
-    addSwitch(1, 3);
-    sw2();
+    showPepe();
+}
 
-    let ifr = this.window.top.document.querySelector('[name="shoutbox"]');
-    if (ifr != null) {
-        ifr.setAttribute("height", "750");
+function showPepe() {
+    if (table1 == null) {
+        let std = document.querySelector('[title=":)"]');
+        let tbl = getNthParent(std, 4);
+        if (tbl != null) {
+            table1 = tbl.cloneNode(true);
+        }
+    }
+    if (table2 == null) {
+        let std = document.querySelector('[title=":)"]');
+        let tb = getNthParent(std, 3);
+        if (tb != null) {
+            let title_index = 1;
+            for (let i = 0; i < links.length; i++) {
+                const row_e = links[i];
+                tb.appendChild(document.createElement("tr"));
+                let tr = document.createElement("tr");
+                // tr.style.height = "30px";
+                // tr.appendChild(document.createElement("td"));
+                for (let j = 0; j < row_e.length; j++) {
+                    const col_e = row_e[j];
+                    addTd(tr, col_e, col_e, title_index);
+                    title_index++;
+                }
+                tb.appendChild(tr);
+            }
+
+            let tbl = getNthParent(std, 4);
+            if (tbl != null) {
+                table2 = tbl.cloneNode(true);
+
+                addSwitch(0, 1);
+
+                let ifr = window.top.document.querySelector('[name="shoutbox"]');
+                if (ifr != null) {
+                    standardHeight = ifr.getAttribute("height");
+                    ifr.setAttribute("height", "750");
+                }
+            }
+        }
+    } else {
+        let std = document.querySelector('[title=":)"]');
+        let tbl = getNthParent(std, 4);
+        if (tbl != null) {
+            tbl.innerHTML = table2.innerHTML;
+
+            addSwitch(0, 1);
+
+            let ifr = window.top.document.querySelector('[name="shoutbox"]');
+            if (ifr != null) {
+                ifr.setAttribute("height", "750");
+            }
+        }
+    }
+}
+
+function hidePepe() {
+    if (table1 != null) {
+        let std = document.querySelector('[title=":)"]');
+        let tbl = getNthParent(std, 4);
+        if (tbl != null) {
+            tbl.innerHTML = table1.innerHTML;
+
+            addSwitch(1, 1);
+
+            let ifr = window.top.document.querySelector('[name="shoutbox"]');
+            if (ifr != null) {
+                ifr.setAttribute("height", standardHeight);
+            }
+        }
     }
 }
 
@@ -201,43 +271,12 @@ function addSwitch(mode, index) {
         a.href = "#";
         if (mode == 0) {
             a.text = "hide";
-            a.addEventListener("click", sw1);
+            a.addEventListener("click", hidePepe);
         } else {
             a.text = "show";
-            a.addEventListener("click", sw2);
+            a.addEventListener("click", showPepe);
         }
         c.appendChild(a);
-    }
-}
-
-function sw1() {
-    let std = document.querySelector('[title=":)"]');
-    let tbl = getNthParent(std, 4);
-    if (tbl != null) {
-        while (tbl.rows.length > 6) {
-            tbl.deleteRow(-1);
-        }
-    }
-}
-
-function sw2() {
-    let std = document.querySelector('[title=":)"]');
-    let tb = getNthParent(std, 3);
-    if (tb != null) {
-        let title_index = 1;
-        for (let i = 0; i < links.length; i++) {
-            const row_e = links[i];
-            tb.appendChild(document.createElement("tr"));
-            let tr = document.createElement("tr");
-            // tr.style.height = "30px";
-            // tr.appendChild(document.createElement("td"));
-            for (let j = 0; j < row_e.length; j++) {
-                const col_e = row_e[j];
-                addTd(tr, col_e, col_e, title_index);
-                title_index++;
-            }
-            tb.appendChild(tr);
-        }
     }
 }
 
