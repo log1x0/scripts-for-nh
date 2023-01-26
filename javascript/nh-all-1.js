@@ -186,7 +186,7 @@ function setStyle() {
     e.style.backgroundImage = "none";
   });
 
-// uncomment this, if the font size should be increased:
+  // uncomment this, if the font size should be increased:
   // document.querySelectorAll("font, td").forEach(e => { e.style.fontSize = "9pt" });
 }
 
