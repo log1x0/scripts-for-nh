@@ -154,18 +154,19 @@ let standardHeight = null;
 
 (function () {
   "use strict";
-  setStyle();
-
-  // uncomment this, if not needed:
-  swapInput();
+  // uncomment this, if needed:
+  // swapInput();
 
   addPepe();
   add_4k();
+  setStyle();
 })();
 
 function setStyle() {
-  // let color1 = "#181818";
-  let color1 = "SlateGray";
+  // choose background color:
+  let color1 = "Gray";
+  // let color1 = "SlateGray";
+
   let color2 = "LightGray";
   let color3 = "#DDCCBB";
   document.body.style.backgroundColor = color1;
@@ -185,6 +186,7 @@ function setStyle() {
     e.style.backgroundImage = "none";
   });
 
+  // uncomment this, if the font size should be increased:
   // document.querySelectorAll("font, td").forEach(e => { e.style.fontSize = "9pt" });
 }
 
