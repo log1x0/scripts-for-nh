@@ -236,6 +236,7 @@ const links = [
 let table1 = null;
 let table2 = null;
 let standardHeight = null;
+const newHeight = "800";
 
 (function () {
   "use strict";
@@ -327,7 +328,7 @@ function showPepe() {
         let ifr = window.top.document.querySelector('[name="shoutbox"]');
         if (ifr != null) {
           standardHeight = ifr.getAttribute("height");
-          ifr.setAttribute("height", "750");
+          ifr.setAttribute("height", newHeight);
         }
       }
     }
@@ -341,7 +342,7 @@ function showPepe() {
 
       let ifr = window.top.document.querySelector('[name="shoutbox"]');
       if (ifr != null) {
-        ifr.setAttribute("height", "750");
+        ifr.setAttribute("height", newHeight);
       }
     }
   }
