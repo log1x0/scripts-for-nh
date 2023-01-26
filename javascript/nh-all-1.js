@@ -155,7 +155,10 @@ let standardHeight = null;
 (function () {
   "use strict";
   setStyle();
-  // swapInput();
+
+  // uncomment this, if not needed:
+  swapInput();
+
   addPepe();
   add_4k();
 })();
@@ -189,10 +192,10 @@ function swapInput() {
   let msg = document.querySelector("#message");
   let tbl = getNthParent(msg, 4);
   if (tbl != null) {
-    let last_row = tbl.rows[tbl.rows.length - 1];
-    let sibling = last_row.previousElementSibling;
-    let parent = last_row.parentNode;
-    parent.insertBefore(last_row, sibling);
+    let row1 = tbl.rows[tbl.rows.length - 2].cloneNode(true);
+    tbl.deleteRow(tbl.rows.length - 2);
+    let row2 = tbl.insertRow(-1);
+    row2.innerHTML = row1.innerHTML;
   }
 }
 
