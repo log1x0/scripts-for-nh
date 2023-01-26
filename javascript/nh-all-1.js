@@ -189,14 +189,14 @@ function setStyle() {
 }
 
 function swapInput() {
-    let msg = document.querySelector("#message");
-    let tbl = getNthParent(msg, 4);
-    if (tbl != null) {
-        let row1 = tbl.rows[tbl.rows.length - 2].cloneNode(true);
-        tbl.deleteRow(tbl.rows.length - 2);
-        let row2 = tbl.insertRow(-1);
-        row2.innerHTML = row1.innerHTML;
-    }
+  let msg = document.querySelector("#message");
+  let tbl = getNthParent(msg, 4);
+  if (tbl != null) {
+    let row1 = tbl.rows[tbl.rows.length - 2].cloneNode(true);
+    tbl.deleteRow(tbl.rows.length - 2);
+    let row2 = tbl.insertRow(-1);
+    row2.innerHTML = row1.innerHTML;
+  }
 }
 
 function addPepe() {
