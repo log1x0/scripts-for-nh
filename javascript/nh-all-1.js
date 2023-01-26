@@ -159,14 +159,14 @@ let standardHeight = null;
 
   addPepe();
   add_4k();
-    setStyle();
+  setStyle();
 })();
 
 function setStyle() {
-    // choose background color:
+  // choose background color:
   let color1 = "Gray";
   // let color1 = "SlateGray";
-    
+
   let color2 = "LightGray";
   let color3 = "#DDCCBB";
   document.body.style.backgroundColor = color1;
