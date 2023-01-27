@@ -245,8 +245,39 @@ const newHeight = "800";
 
   addPepe();
   add_4k();
-  setStyle();
+  addSwitchStyle();
 })();
+
+function addSwitchStyle() {
+  let td = document.querySelector("td.column1");
+  if (td != null) {
+  let tb = getNthParent(td, 2);
+  let r = tb.insertRow(-1);
+  let c = r.insertCell(-1);
+  let a = document.createElement("a");
+  a.href = "#";
+  a.text = "Switch style...";
+  a.addEventListener("click", styleClick);
+  c.appendChild(a);
+  if (!localStorage.shouldStyleSet) {
+    localStorage.shouldStyleSet = 0;
+  }
+  if (localStorage.shouldStyleSet == 1) {
+    setStyle();
+  }
+  }
+}
+
+function styleClick() {
+  if (localStorage.shouldStyleSet) {
+    localStorage.shouldStyleSet = (Number(localStorage.shouldStyleSet) + 1) % 2;
+    if (localStorage.shouldStyleSet == 1) {
+      setStyle();
+    } else {
+      location.reload();
+    }
+  }
+}
 
 function setStyle() {
   // choose background color:
