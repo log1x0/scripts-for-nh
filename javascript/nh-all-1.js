@@ -271,11 +271,7 @@ function addSwitchStyle() {
 function styleClick() {
   if (localStorage.shouldStyleSet) {
     localStorage.shouldStyleSet = (Number(localStorage.shouldStyleSet) + 1) % 2;
-    if (localStorage.shouldStyleSet == 1) {
-      setStyle();
-    } else {
       location.reload();
-    }
   }
 }
 
