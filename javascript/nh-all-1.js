@@ -245,8 +245,38 @@ const newHeight = "800";
 
   addPepe();
   add_4k();
-  setStyle();
+  addSwitchStyle();
 })();
+
+function addSwitchStyle() {
+  let select = document.querySelector('select[name="theme"]');
+  if (select != null) {
+    let opt = document.createElement("option");
+    opt.value = 9;
+    opt.innerHTML = "Custom by Logi on/off";
+    select.onchange = styleClick;
+    select.appendChild(opt);
+  }
+  if (localStorage.shouldStyleSet) {
+  } else {
+    localStorage.shouldStyleSet = 0;
+  }
+  if (localStorage.shouldStyleSet == 1) {
+    setStyle();
+  }
+}
+
+function styleClick() {
+  if (localStorage.shouldStyleSet) {
+    let select = document.querySelector('select[name="theme"]');
+    if (select != null && select.value == 9) {
+      localStorage.shouldStyleSet =
+        (Number(localStorage.shouldStyleSet) + 1) % 2;
+      select.options[0].selected = "selected";
+    }
+  }
+  document.detailbox.submit();
+}
 
 function setStyle() {
   // choose background color:
