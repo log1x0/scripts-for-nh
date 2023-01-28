@@ -257,32 +257,32 @@ function addSwitchStyle() {
     select.onchange = styleClick;
     select.appendChild(opt);
     if (localStorage.shouldStyleSet && localStorage.shouldStyleSet == 1) {
-        select.value = 9;
+      select.value = 9;
     }
   }
-    if (!localStorage.shouldStyleSet) {
-        // init:
-        localStorage.shouldStyleSet = 0;
-    }
+  if (!localStorage.shouldStyleSet) {
+    // init:
+    localStorage.shouldStyleSet = 0;
+  }
   if (localStorage.shouldStyleSet == 1) {
-      setStyle();
+    setStyle();
   }
 }
 
 function styleClick() {
-    let select = document.querySelector('select[name="theme"]');
+  let select = document.querySelector('select[name="theme"]');
   if (localStorage.shouldStyleSet && select != null && select.value == 9) {
-      // select black & white... select Logi... and reload site again...:
-      localStorage.shouldStyleSet = 0;
-      select.value = 1;
-      document.detailbox.submit();
-      localStorage.shouldStyleSet = 1;
-      select.value = 9;
-      setStyle();
-    } else {
-        localStorage.shouldStyleSet = 0;
-        document.detailbox.submit();
-    }
+    // select black & white... select Logi... and reload site again...:
+    localStorage.shouldStyleSet = 0;
+    select.value = 1;
+    document.detailbox.submit();
+    localStorage.shouldStyleSet = 1;
+    select.value = 9;
+    setStyle();
+  } else {
+    localStorage.shouldStyleSet = 0;
+    document.detailbox.submit();
+  }
 }
 
 function setStyle() {
