@@ -236,7 +236,7 @@ const links = [
 let table1 = null;
 let table2 = null;
 let standardHeight = null;
-const newHeight = "800";
+const newHeight = 800;
 
 (function () {
   "use strict";
@@ -258,11 +258,11 @@ function addSwitchStyle() {
     select.appendChild(opt);
   }
   if (localStorage.shouldStyleSet) {
+    if (localStorage.shouldStyleSet == 1) {
+      setStyle();
+    }
   } else {
     localStorage.shouldStyleSet = 0;
-  }
-  if (localStorage.shouldStyleSet == 1) {
-    setStyle();
   }
 }
 
@@ -280,7 +280,7 @@ function styleClick() {
 
 function setStyle() {
   // choose background color:
-  let color1 = "Gray";
+  let color1 = "#454545";
   // let color1 = "SlateGray";
 
   let color2 = "LightGray";
