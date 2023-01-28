@@ -249,20 +249,14 @@ const newHeight = "800";
 })();
 
 function addSwitchStyle() {
-  let ahref = document.querySelector(
-    'a[href="index.php?strWebValue=account&strWebAction=messagebox&box=1"]'
-  );
-  if (ahref != null) {
-    let r = getNthParent(ahref, 2);
-    let c = r.insertCell(-1);
-    c.style.textAlign = "center";
-    c.style.verticalAlign = "middle";
-    let a = document.createElement("a");
-    a.href = "#";
-    a.text = "Switch style...";
-    a.addEventListener("click", styleClick);
-    c.appendChild(a);
-  }
+let select = document.querySelector('select[name="theme"]');
+if (select != null) {
+  let opt = document.createElement('option');
+  opt.value = 9;
+  opt.innerHTML = "Custom by Logi on/off";
+  select.onchange = styleClick;
+  select.appendChild(opt);
+}
   if (localStorage.shouldStyleSet) {
   } else {
     localStorage.shouldStyleSet = 0;
@@ -274,9 +268,13 @@ function addSwitchStyle() {
 
 function styleClick() {
   if (localStorage.shouldStyleSet) {
-    localStorage.shouldStyleSet = (Number(localStorage.shouldStyleSet) + 1) % 2;
-    location.reload();
+    let select = document.querySelector('select[name="theme"]');
+    if (select != null && select.value == 9) {
+      localStorage.shouldStyleSet = (Number(localStorage.shouldStyleSet) + 1) % 2;
+      select.options[0].selected = "selected";
+    }
   }
+  document.detailbox.submit();
 }
 
 function setStyle() {
