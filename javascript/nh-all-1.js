@@ -249,19 +249,21 @@ const newHeight = "800";
 })();
 
 function addSwitchStyle() {
-  let td = document.querySelector("td.column1");
-  if (td != null) {
-    let tb = getNthParent(td, 2);
-    let r = tb.insertRow(-1);
+  let ahref = document.querySelector('a[href="index.php?strWebValue=account&strWebAction=messagebox&box=1"]');
+  if (ahref != null) {
+    let r = getNthParent(ahref, 2);
     let c = r.insertCell(-1);
+      c.style.textAlign = "center";
+  c.style.verticalAlign = "middle";
     let a = document.createElement("a");
     a.href = "#";
     a.text = "Switch style...";
     a.addEventListener("click", styleClick);
     c.appendChild(a);
   }
-  if (!localStorage.shouldStyleSet) {
-    localStorage.shouldStyleSet = 0;
+  if (localStorage.shouldStyleSet) {
+  } else {
+      localStorage.shouldStyleSet = 0;
   }
   if (localStorage.shouldStyleSet == 1) {
     setStyle();
