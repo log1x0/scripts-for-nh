@@ -253,29 +253,36 @@ function addSwitchStyle() {
   if (select != null) {
     let opt = document.createElement("option");
     opt.value = 9;
-    opt.innerHTML = "Custom by Logi on/off";
+    opt.innerHTML = "Custom by Logi";
     select.onchange = styleClick;
     select.appendChild(opt);
-  }
-  if (localStorage.shouldStyleSet) {
-    if (localStorage.shouldStyleSet == 1) {
-      setStyle();
+    if (localStorage.shouldStyleSet && localStorage.shouldStyleSet == 1) {
+        select.value = 9;
     }
-  } else {
-    localStorage.shouldStyleSet = 0;
+  }
+    if (!localStorage.shouldStyleSet) {
+        // init:
+        localStorage.shouldStyleSet = 0;
+    }
+  if (localStorage.shouldStyleSet == 1) {
+      setStyle();
   }
 }
 
 function styleClick() {
-  if (localStorage.shouldStyleSet) {
     let select = document.querySelector('select[name="theme"]');
-    if (select != null && select.value == 9) {
-      localStorage.shouldStyleSet =
-        (Number(localStorage.shouldStyleSet) + 1) % 2;
-      select.options[0].selected = "selected";
+  if (localStorage.shouldStyleSet && select != null && select.value == 9) {
+      // select black & white... select Logi... and reload site again...:
+      localStorage.shouldStyleSet = 0;
+      select.value = 1;
+      document.detailbox.submit();
+      localStorage.shouldStyleSet = 1;
+      select.value = 9;
+      setStyle();
+    } else {
+        localStorage.shouldStyleSet = 0;
+        document.detailbox.submit();
     }
-  }
-  document.detailbox.submit();
 }
 
 function setStyle() {
