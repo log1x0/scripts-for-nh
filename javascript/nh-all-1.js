@@ -219,12 +219,15 @@ const newHeight = 860;
 
 (function () {
   "use strict";
-  // uncomment this, if needed:
+  preloadImages(links);
+  window.addEventListener('load', function() {
+    // uncomment this, if needed:
   // swapInput();
 
   addPepe();
   add_4k();
   addSwitchStyle();
+}, false);
 })();
 
 function addSwitchStyle() {
@@ -303,8 +306,27 @@ function swapInput() {
   }
 }
 
+function preloadImages(array) {
+  if (!preloadImages.list) {
+      preloadImages.list = [];
+  }
+  var list = preloadImages.list;
+  for (var i = 0; i < array.length; i++) {
+      var img = new Image();
+      img.onload = function() {
+          var index = list.indexOf(this);
+          if (index !== -1) {
+              // remove image from the array once it's loaded
+              // for memory consumption reasons
+              list.splice(index, 1);
+          }
+      }
+      list.push(img);
+      img.src = array[i];
+  }
+}
+
 function addPepe() {
-  initLinks();
   showPepe();
   hidePepe();
 }
@@ -332,6 +354,7 @@ function showPepe() {
     let std = document.querySelector('[title=":)"]');
     let tb = getNthParent(std, 3);
     if (tb != null) {
+      initLinks();
       let rowsToSort = [];
       let title_index = 1;
       for (let i = 0; i < links.length; i++) {
