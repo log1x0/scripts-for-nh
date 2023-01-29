@@ -200,6 +200,7 @@ const links = [
     "https://newheaven.nl/files/imagecache/60835_zntmbpn9kcd.gif",
     "https://newheaven.nl/files/imagecache/60835_upkmua9u4zx.gif",
     "https://newheaven.nl/files/imagecache/60835_krvlvl6n2di.gif",
+    "https://newheaven.nl/files/imagecache/63733_pepe-089.gif",
   ],
   [
     "https://newheaven.nl/files/imagecache/60835_w7j8d2b27b8.gif",
@@ -230,6 +231,8 @@ const links = [
     "https://newheaven.nl/files/imagecache/60835_9cyu4mtxve8.gif",
     "https://newheaven.nl/files/imagecache/60835_o018f09hkfs.gif",
     "https://newheaven.nl/files/imagecache/60835_kjcq2pi9lq6.gif",
+    "https://newheaven.nl/files/imagecache/63733_pepe-089.gif",
+    "https://newheaven.nl/files/imagecache/63733_pepe-089.gif",
   ],
 ];
 
@@ -471,11 +474,11 @@ function sortTds(rows) {
   allCells.sort(function (a, b) {
     return a.firstChild.width - b.firstChild.width;
   });
-  const jw = parseFloat(h);
+  const jw = h;
   let newCells = [];
   for (let i = 0; i < h; i++) {
     for (let j = 0; j < w; j++) {
-      let idx = Math.round(j * jw + i);
+      let idx = j * jw + i;
       if (idx < allCells.length) {
         newCells.push(allCells[idx]);
       }
