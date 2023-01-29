@@ -416,6 +416,13 @@ function showPepe() {
     let std = document.querySelector('[title=":)"]');
     let tbl = getNthParent(std, 4);
     if (tbl != null) {
+      tbl.rows[5].deleteCell(-1);
+      let newRows = [];
+      for (let i = 1; i < 6; i+=2) {
+        newRows.push(tbl.rows[i]);
+      }
+      rearrangeCells(newRows, [2,2,3]);
+    
       table1 = tbl.cloneNode(true);
     }
   }
@@ -552,4 +559,70 @@ function add_4k() {
       e.src = "https://newheaven.nl/files/imagecache/63726_29907_2160p_TV.png";
     }
   });
+}
+
+function getWidthImg(img) {
+  let w = img.naturalWidth;
+  let h = img.naturalHeight;
+  let f = scalar;
+  if (w >= h) {
+    f *= 20.0 / h;
+  } else {
+    f *= 20.0 / w;
+  }
+  if (f) {
+    return Math.round(w * f);
+  }
+  return 30;
+}
+
+function rearrangeCells(rows, spans) {
+  if (rows.length > 0) {
+    let w = rows[0].cells.length;
+    let h = rows.length;
+    let allCells = [];
+    for (let i = 0; i < h; i++) {
+      let cells = rows[i].cells;
+      for (let j = 0; j < cells.length; j++) {
+        allCells.push(cells[j]);
+      }
+    }
+    allCells.sort(function (a, b) {
+      return getWidthImg(a.firstChild) - getWidthImg(b.firstChild);
+    });
+    let newCells = [];
+    for (let i = 0; i < h; i++) {
+      for (let j = 0; j < w; j++) {
+        let idx = j * h + i;
+        if (idx < allCells.length) {
+          newCells.push(allCells[idx]);
+        }
+      }
+    }
+    for (let i = 0; i < h; i++) {
+      let r = rows[i];
+      while (r.cells.length > 0) {
+        r.deleteCell(-1);
+      }
+      for (let j = 0; j < w; j++) {
+        let c = r.insertCell(-1);
+        c.innerHTML = newCells[i*w+j].innerHTML;
+        c.style.textAlign = "center";
+        c.style.verticalAlign = "middle";
+      }
+    }
+    // for (let i = 0; i < spans.length; i++) {
+    //   let j = w - spans.length + i;
+    //   let n = spans[i] - 1;
+    //   while (n > 0) {
+    //     for (let k = 0; k < h; k++) {
+    //       rows[k].insertCell(-1);
+    //     }
+    //     n--;
+    //   }
+    //   for (let k = 0; k < h; k++) {
+    //     rows[k].cells[j].colSpan = spans[i];
+    //   }
+    // }
+  }
 }
