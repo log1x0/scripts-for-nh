@@ -341,20 +341,21 @@ function showPepe() {
     let std = document.querySelector('[title=":)"]');
     let tb = getNthParent(std, 3);
     if (tb != null) {
+      let rowsToSort = [];
       let title_index = 1;
       for (let i = 0; i < links.length; i++) {
         const row_e = links[i];
         tb.appendChild(document.createElement("tr"));
         let tr = document.createElement("tr");
-        // tr.style.height = "30px";
-        // tr.appendChild(document.createElement("td"));
         for (let j = 0; j < row_e.length; j++) {
           const col_e = row_e[j];
           addTd(tr, col_e, col_e, title_index);
           title_index++;
         }
         tb.appendChild(tr);
+        rowsToSort.push(tr);
       }
+      sortTds(rowsToSort);
 
       let tbl = getNthParent(std, 4);
       if (tbl != null) {
@@ -445,6 +446,56 @@ function addTd(tr, src, text, title) {
   img.title = title;
   td.appendChild(img);
   tr.appendChild(td);
+
+  let w = img.naturalWidth;
+  let h = img.naturalHeight;
+  let f = 1.2;
+  if (w >= h) {
+    f *= 20.0 / h;
+  } else {
+    f *= 20.0 / w;
+  }
+  img.width = w * f;
+  img.height = h * f;
+}
+
+function sortTds(rows) {
+  const w = rows[0].cells.length;
+  const h = rows.length;
+  let allCells = [];
+  for (let i = 0; i < rows.length; i++) {
+    for (let j = 0; j < rows[i].cells.length; j++) {
+      allCells.push(rows[i].cells[j].cloneNode(true));
+    }
+  }
+  allCells.sort(function (a, b) {
+    return a.firstChild.width - b.firstChild.width;
+  });
+  const jw = parseFloat(h);
+  let newCells = [];
+  for (let i = 0; i < h; i++) {
+    for (let j = 0; j < w; j++) {
+      let idx = Math.round(j * jw + i);
+      if (idx < allCells.length) {
+        newCells.push(allCells[idx]);
+      }
+    }
+  }
+  for (let i = 0; i < h; i++) {
+    let r = rows[i];
+    while (r.cells.length > 0) {
+      r.deleteCell(-1);
+    }
+    for (let j = 0; j < w; j++) {
+      let c = r.insertCell(-1);
+      let idx = i * w + j;
+      if (idx < newCells.length) {
+        c.outerHTML = newCells[idx].outerHTML;
+      } else {
+        c.outerHTML = newCells[0].outerHTML;
+      }
+    }
+  }
 }
 
 function add_4k() {
