@@ -452,14 +452,14 @@ function addTd(tr, src, text, title) {
 
   let w = img.naturalWidth;
   let h = img.naturalHeight;
-  let f = 1.2;
+  let f = 1.0;
   if (w >= h) {
     f *= 20.0 / h;
   } else {
     f *= 20.0 / w;
   }
-  img.width = w * f;
-  img.height = h * f;
+  img.width = Math.round(w * f);
+  img.height = Math.round(h * f);
 }
 
 function sortTds(rows) {
@@ -493,9 +493,9 @@ function sortTds(rows) {
       let c = r.insertCell(-1);
       let idx = i * w + j;
       if (idx < newCells.length) {
-        c.outerHTML = newCells[idx].outerHTML;
+        c.innerHTML = newCells[idx].innerHTML;
       } else {
-        c.outerHTML = newCells[0].outerHTML;
+        c.innerHTML = newCells[0].innerHTML;
       }
     }
   }
