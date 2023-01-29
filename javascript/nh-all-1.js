@@ -9,218 +9,14 @@
 // @grant        none
 // ==/UserScript==
 
-let links = [
-  "https://newheaven.nl/files/imagecache/63726_pepe-001.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-095.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-002.png",
-  "https://newheaven.nl/files/imagecache/63726_pepe-003.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-004.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-096.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-005.png",
-  "https://newheaven.nl/files/imagecache/63733_pepe-119.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-006.png",
-  "https://newheaven.nl/files/imagecache/63726_pepe-007.png",
-  "https://newheaven.nl/files/imagecache/63726_pepe-008.png",
-  "https://newheaven.nl/files/imagecache/63726_pepe-009.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-010.png",
-  "https://newheaven.nl/files/imagecache/63726_pepe-011.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-012.png",
-  "https://newheaven.nl/files/imagecache/63726_pepe-013.png",
-  "https://newheaven.nl/files/imagecache/63733_pepe-080.png",
-  "https://newheaven.nl/files/imagecache/63733_pepe-081.png",
-  "https://newheaven.nl/files/imagecache/63733_pepe-082.png",
-  "https://newheaven.nl/files/imagecache/63733_pepe-083.png",
-  "https://newheaven.nl/files/imagecache/63733_pepe-084.png",
-  "https://newheaven.nl/files/imagecache/63733_pepe-097.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-098.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-100.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-088.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-089.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-087.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-091.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-092.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-093.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-014.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-015.png",
-  "https://newheaven.nl/files/imagecache/63726_pepe-016.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-017.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-018.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-019.png",
-  "https://newheaven.nl/files/imagecache/63733_pepe-099.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-020.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-021.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-101.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-102.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-110.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-111.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-120.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-112.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-113.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-114.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-115.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-116.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-118.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-103.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-104.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-105.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-106.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-107.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-108.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-022.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-023.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-024.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-025.gif",
-  "https://newheaven.nl/files/imagecache/63726_pepe-026.gif",
-  "https://newheaven.nl/files/imagecache/56594_pepePoint.png",
-  "https://newheaven.nl/files/imagecache/56594_bigPls.gif",
-  "https://newheaven.nl/files/imagecache/63726_smilie_wet_175.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-069.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-070.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-071.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-072.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-073.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-074.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-075.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-076.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-077.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-078.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-079.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-094.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-109.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-121.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-122.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-123.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-124.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-125.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-126.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-127.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-128.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-129.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-130.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-131.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-132.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-133.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-134.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-135.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-136.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-137.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-117.gif",
-  "https://newheaven.nl/files/imagecache/56594_peepoCoffee.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-139.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-140.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-141.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-142.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-143.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-144.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-145.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-146.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-147.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-148.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-149.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-150.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-151.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-152.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-153.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-154.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-155.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-156.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-157.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-158.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-160.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-161.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-163.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-164.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-165.gif",
-  "https://newheaven.nl/files/imagecache/63733_pepe-159.gif",
-  "https://newheaven.nl/files/imagecache/63837_piratenboot.gif",
-  "https://newheaven.nl/files/imagecache/60835_na6otob9r4t.gif",
-  "https://newheaven.nl/files/imagecache/60835_jo6a6witkjw.gif",
-  "https://newheaven.nl/files/imagecache/60835_brbngzd0q4c.gif",
-  "https://newheaven.nl/files/imagecache/63837_pirate.gif",
-  "https://newheaven.nl/files/imagecache/63837_coffeem.gif",
-  "https://newheaven.nl/files/imagecache/63837_yawnm.gif",
-  "https://newheaven.nl/files/imagecache/63837_shoot.gif",
-  "https://newheaven.nl/files/imagecache/63837_pirate2.gif",
-  "https://newheaven.nl/files/imagecache/63837_wave2.gif",
-  "https://newheaven.nl/files/imagecache/63837_0579.gif",
-  "https://newheaven.nl/files/imagecache/63837_0529.gif",
-  "https://newheaven.nl/files/imagecache/63837_0564.gif",
-  "https://newheaven.nl/files/imagecache/63837_santa.gif",
-  "https://newheaven.nl/files/imagecache/63837_user%20delete.gif",
-  "https://newheaven.nl/files/imagecache/63837_97c4247b2d741ff6c721f26cda5a48ef.gif",
-  "https://newheaven.nl/files/imagecache/63837_rarschleppen.gif",
-  "https://newheaven.nl/files/imagecache/63837_3e22be6fc7ac0a317defd06f7d4a87de.gif",
-  "https://newheaven.nl/files/imagecache/63837_rip.gif",
-  "https://newheaven.nl/files/imagecache/63837_censored.gif",
-  "https://newheaven.nl/files/imagecache/63837_0424.gif",
-  "https://newheaven.nl/files/imagecache/63837_0567.gif",
-  "https://newheaven.nl/files/imagecache/63837_whiteflag.gif",
-  "https://newheaven.nl/files/imagecache/63837_doppelbatsch.gif",
-  "https://newheaven.nl/files/imagecache/63837_007.gif",
-  "https://newheaven.nl/files/imagecache/63837_explode.gif",
-  "https://newheaven.nl/files/imagecache/63837_hmmm.gif",
-  "https://newheaven.nl/files/imagecache/63837_0538.gif",
-  "https://newheaven.nl/files/imagecache/63837_furz.gif",
-  "https://newheaven.nl/files/imagecache/63837_0441.gif",
-  "https://newheaven.nl/files/imagecache/63837_7b3cdb2918bc7511686ccfbd5ab0870c.gif",
-  "https://newheaven.nl/files/imagecache/60835_yovyor4rxqf.gif",
-  "https://newheaven.nl/files/imagecache/60835_am7sukwngj.gif",
-  "https://newheaven.nl/files/imagecache/60835_korx8xguvk2.gif",
-  "https://newheaven.nl/files/imagecache/60835_tdq5oxvc2d0.gif",
-  "https://newheaven.nl/files/imagecache/60835_5lb782jhyu5.gif",
-  "https://newheaven.nl/files/imagecache/60835_2qshsmhe3j9.gif",
-  "https://newheaven.nl/files/imagecache/60835_ouecny3owqv.gif",
-  "https://newheaven.nl/files/imagecache/60835_iv3q20c6fue.gif",
-  "https://newheaven.nl/files/imagecache/60835_o6qy11a0gnr.gif",
-  "https://newheaven.nl/files/imagecache/60835_hl3qylku3jn.gif",
-  "https://newheaven.nl/files/imagecache/60835_o6ujjd9fwic.gif",
-  "https://newheaven.nl/files/imagecache/60835_cmnjri326fn.gif",
-  "https://newheaven.nl/files/imagecache/60835_jo6a6witkjw.gif",
-  "https://newheaven.nl/files/imagecache/60835_b3wecnal8r7.gif",
-  "https://newheaven.nl/files/imagecache/60835_6sy27m11231.gif",
-  "https://newheaven.nl/files/imagecache/60835_mwrel634yyk.gif",
-  "https://newheaven.nl/files/imagecache/60835_0eadb9tf3sj.gif",
-  "https://newheaven.nl/files/imagecache/60835_j9z3hg5fx8r.gif",
-  "https://newheaven.nl/files/imagecache/60835_xntkyxe3mk7.gif",
-  "https://newheaven.nl/files/imagecache/60835_na6otob9r4t.gif",
-  "https://newheaven.nl/files/imagecache/60835_uriwd79j509.gif",
-  "https://newheaven.nl/files/imagecache/60835_j1v404ijrbp.gif",
-  "https://newheaven.nl/files/imagecache/60835_m1l1my18m6u.gif",
-  "https://newheaven.nl/files/imagecache/60835_zntmbpn9kcd.gif",
-  "https://newheaven.nl/files/imagecache/60835_upkmua9u4zx.gif",
-  "https://newheaven.nl/files/imagecache/60835_krvlvl6n2di.gif",
-  "https://newheaven.nl/files/imagecache/60835_w7j8d2b27b8.gif",
-  "https://newheaven.nl/files/imagecache/60835_ha2xo4bmnw0.gif",
-  "https://newheaven.nl/files/imagecache/60835_4lfkh3dczw2.gif",
-  "https://newheaven.nl/files/imagecache/60835_7wkeiyd4s4r.gif",
-  "https://newheaven.nl/files/imagecache/60835_4ycax4rze0t.gif",
-  "https://newheaven.nl/files/imagecache/60835_lvyj29uy41w.gif",
-  "https://newheaven.nl/files/imagecache/60835_qpscbjc8np1.gif",
-  "https://newheaven.nl/files/imagecache/60835_1ze6f5a9qv0.gif",
-  "https://newheaven.nl/files/imagecache/60835_6p7wagn8zb9.gif",
-  "https://newheaven.nl/files/imagecache/60835_rn3tshdb8tu.gif",
-  "https://newheaven.nl/files/imagecache/60835_ycdy3qc1fdp.gif",
-  "https://newheaven.nl/files/imagecache/60835_ukvaf7lmnx0.gif",
-  "https://newheaven.nl/files/imagecache/60835_83yak1h0vun.gif",
-  "https://newheaven.nl/files/imagecache/60835_hase.gif",
-  "https://newheaven.nl/files/imagecache/60835_chill.gif",
-  "https://newheaven.nl/files/imagecache/60835_x7y3azegxgz.gif",
-  "https://newheaven.nl/files/imagecache/60835_gtfqbjst0pm.gif",
-  "https://newheaven.nl/files/imagecache/60835_ejfsvutvlev.gif",
-  "https://newheaven.nl/files/imagecache/60835_0foyaxkep1g.gif",
-  "https://newheaven.nl/files/imagecache/60835_5yg0xzhapod.gif",
-  "https://newheaven.nl/files/imagecache/60835_ufb3847f1hj.gif",
-];
-
+let links = [["https://newheaven.nl/files/imagecache/63726_pepe-001.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63733_pepe-095.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-002.png", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-003.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-004.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63733_pepe-096.gif", 35, 34], ["https://newheaven.nl/files/imagecache/63726_pepe-005.png", 25, 25], ["https://newheaven.nl/files/imagecache/63733_pepe-119.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63726_pepe-006.png", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-007.png", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-008.png", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-009.gif", 28, 27], ["https://newheaven.nl/files/imagecache/63726_pepe-010.png", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-011.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-012.png", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-013.png", 28, 28], ["https://newheaven.nl/files/imagecache/63733_pepe-080.png", 28, 28], ["https://newheaven.nl/files/imagecache/63733_pepe-081.png", 28, 28], ["https://newheaven.nl/files/imagecache/63733_pepe-082.png", 28, 28], ["https://newheaven.nl/files/imagecache/63733_pepe-083.png", 28, 28], ["https://newheaven.nl/files/imagecache/63733_pepe-084.png", 28, 28], ["https://newheaven.nl/files/imagecache/63733_pepe-097.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-098.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-100.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-088.gif", 35, 34], ["https://newheaven.nl/files/imagecache/63733_pepe-089.gif", 30, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-087.gif", 44, 44], ["https://newheaven.nl/files/imagecache/63733_pepe-091.gif", 30, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-092.gif", 30, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-093.gif", 30, 32], ["https://newheaven.nl/files/imagecache/63726_pepe-014.gif", 21, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-015.png", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-016.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-017.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-018.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-019.png", 28, 28], ["https://newheaven.nl/files/imagecache/63733_pepe-099.gif", 35, 34], ["https://newheaven.nl/files/imagecache/63726_pepe-020.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-021.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63733_pepe-101.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-102.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-110.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-111.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-120.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-112.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-113.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-114.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-115.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-116.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-118.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-103.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-104.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-105.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-106.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-107.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-108.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63726_pepe-022.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-023.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-024.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-025.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63726_pepe-026.gif", 28, 28], ["https://newheaven.nl/files/imagecache/56594_pepePoint.png", 32, 32], ["https://newheaven.nl/files/imagecache/56594_bigPls.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63726_smilie_wet_175.gif", 46, 24], ["https://newheaven.nl/files/imagecache/63733_pepe-069.gif", 50, 46], ["https://newheaven.nl/files/imagecache/63733_pepe-070.gif", 28, 28], ["https://newheaven.nl/files/imagecache/63733_pepe-071.gif", 88, 19], ["https://newheaven.nl/files/imagecache/63733_pepe-072.gif", 48, 30], ["https://newheaven.nl/files/imagecache/63733_pepe-073.gif", 81, 26], ["https://newheaven.nl/files/imagecache/63733_pepe-074.gif", 40, 25], ["https://newheaven.nl/files/imagecache/63733_pepe-075.gif", 18, 18], ["https://newheaven.nl/files/imagecache/63733_pepe-076.gif", 41, 40], ["https://newheaven.nl/files/imagecache/63733_pepe-077.gif", 26, 18], ["https://newheaven.nl/files/imagecache/63733_pepe-078.gif", 36, 29], ["https://newheaven.nl/files/imagecache/63733_pepe-079.gif", 42, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-094.gif", 36, 26], ["https://newheaven.nl/files/imagecache/63733_pepe-109.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-121.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-122.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-123.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-124.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-125.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-126.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-127.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-128.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-129.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-130.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-131.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-132.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-133.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-134.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-135.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-136.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-137.gif", 41, 36], ["https://newheaven.nl/files/imagecache/63733_pepe-117.gif", 32, 32], ["https://newheaven.nl/files/imagecache/56594_peepoCoffee.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-139.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-140.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-141.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-142.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-143.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-144.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-145.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-146.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-147.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-148.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-149.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-150.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-151.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-152.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-153.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-154.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-155.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-156.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-157.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-158.gif", 32, 32], ["https://newheaven.nl/files/imagecache/63733_pepe-160.gif", 64, 64], ["https://newheaven.nl/files/imagecache/63733_pepe-161.gif", 64, 64], ["https://newheaven.nl/files/imagecache/63733_pepe-163.gif", 64, 64], ["https://newheaven.nl/files/imagecache/63733_pepe-164.gif", 64, 64], ["https://newheaven.nl/files/imagecache/63733_pepe-165.gif", 64, 64], ["https://newheaven.nl/files/imagecache/63733_pepe-159.gif", 64, 64], ["https://newheaven.nl/files/imagecache/63837_piratenboot.gif", 140, 130], ["https://newheaven.nl/files/imagecache/60835_na6otob9r4t.gif", 23, 29], ["https://newheaven.nl/files/imagecache/60835_jo6a6witkjw.gif", 56, 29], ["https://newheaven.nl/files/imagecache/60835_brbngzd0q4c.gif", 96, 26], ["https://newheaven.nl/files/imagecache/63837_pirate.gif", 42, 42], ["https://newheaven.nl/files/imagecache/63837_coffeem.gif", 29, 30], ["https://newheaven.nl/files/imagecache/63837_yawnm.gif", 20, 23], ["https://newheaven.nl/files/imagecache/63837_shoot.gif", 120, 20], ["https://newheaven.nl/files/imagecache/63837_pirate2.gif", 25, 25], ["https://newheaven.nl/files/imagecache/63837_wave2.gif", 26, 18], ["https://newheaven.nl/files/imagecache/63837_0579.gif", 34, 26], ["https://newheaven.nl/files/imagecache/63837_0529.gif", 113, 65], ["https://newheaven.nl/files/imagecache/63837_0564.gif", 109, 33], ["https://newheaven.nl/files/imagecache/63837_santa.gif", 20, 22], ["https://newheaven.nl/files/imagecache/63837_user%20delete.gif", 80, 80], ["https://newheaven.nl/files/imagecache/63837_97c4247b2d741ff6c721f26cda5a48ef.gif", 69, 46], ["https://newheaven.nl/files/imagecache/63837_rarschleppen.gif", 24, 42], ["https://newheaven.nl/files/imagecache/63837_3e22be6fc7ac0a317defd06f7d4a87de.gif", 75, 86], ["https://newheaven.nl/files/imagecache/63837_rip.gif", 43, 34], ["https://newheaven.nl/files/imagecache/63837_censored.gif", 48, 18], ["https://newheaven.nl/files/imagecache/63837_0424.gif", 43, 27], ["https://newheaven.nl/files/imagecache/63837_0567.gif", 40, 30], ["https://newheaven.nl/files/imagecache/63837_whiteflag.gif", 54, 40], ["https://newheaven.nl/files/imagecache/63837_doppelbatsch.gif", 100, 50], ["https://newheaven.nl/files/imagecache/63837_007.gif", 126, 56], ["https://newheaven.nl/files/imagecache/63837_explode.gif", 48, 112], ["https://newheaven.nl/files/imagecache/63837_hmmm.gif", 25, 23], ["https://newheaven.nl/files/imagecache/63837_0538.gif", 60, 55], ["https://newheaven.nl/files/imagecache/63837_furz.gif", 37, 25], ["https://newheaven.nl/files/imagecache/63837_0441.gif", 50, 22], ["https://newheaven.nl/files/imagecache/63837_7b3cdb2918bc7511686ccfbd5ab0870c.gif", 66, 26], ["https://newheaven.nl/files/imagecache/60835_yovyor4rxqf.gif", 50, 40], ["https://newheaven.nl/files/imagecache/60835_am7sukwngj.gif", 188, 46], ["https://newheaven.nl/files/imagecache/60835_korx8xguvk2.gif", 153, 29], ["https://newheaven.nl/files/imagecache/60835_tdq5oxvc2d0.gif", 39, 29], ["https://newheaven.nl/files/imagecache/60835_5lb782jhyu5.gif", 234, 109], ["https://newheaven.nl/files/imagecache/60835_2qshsmhe3j9.gif", 58, 51], ["https://newheaven.nl/files/imagecache/60835_ouecny3owqv.gif", 48, 34], ["https://newheaven.nl/files/imagecache/60835_iv3q20c6fue.gif", 39, 22], ["https://newheaven.nl/files/imagecache/60835_o6qy11a0gnr.gif", 80, 60], ["https://newheaven.nl/files/imagecache/60835_hl3qylku3jn.gif", 76, 51], ["https://newheaven.nl/files/imagecache/60835_o6ujjd9fwic.gif", 68, 48], ["https://newheaven.nl/files/imagecache/60835_cmnjri326fn.gif", 41, 49], ["https://newheaven.nl/files/imagecache/60835_jo6a6witkjw.gif", 56, 29], ["https://newheaven.nl/files/imagecache/60835_b3wecnal8r7.gif", 63, 60], ["https://newheaven.nl/files/imagecache/60835_6sy27m11231.gif", 69, 46], ["https://newheaven.nl/files/imagecache/60835_mwrel634yyk.gif", 60, 34], ["https://newheaven.nl/files/imagecache/60835_0eadb9tf3sj.gif", 27, 27], ["https://newheaven.nl/files/imagecache/60835_j9z3hg5fx8r.gif", 104, 67], ["https://newheaven.nl/files/imagecache/60835_xntkyxe3mk7.gif", 50, 35], ["https://newheaven.nl/files/imagecache/60835_na6otob9r4t.gif", 23, 29], ["https://newheaven.nl/files/imagecache/60835_uriwd79j509.gif", 136, 81], ["https://newheaven.nl/files/imagecache/60835_j1v404ijrbp.gif", 92, 45], ["https://newheaven.nl/files/imagecache/60835_m1l1my18m6u.gif", 48, 34], ["https://newheaven.nl/files/imagecache/60835_zntmbpn9kcd.gif", 118, 75], ["https://newheaven.nl/files/imagecache/60835_upkmua9u4zx.gif", 114, 44], ["https://newheaven.nl/files/imagecache/60835_krvlvl6n2di.gif", 97, 43], ["https://newheaven.nl/files/imagecache/60835_w7j8d2b27b8.gif", 98, 60], ["https://newheaven.nl/files/imagecache/60835_ha2xo4bmnw0.gif", 67, 62], ["https://newheaven.nl/files/imagecache/60835_4lfkh3dczw2.gif", 35, 30], ["https://newheaven.nl/files/imagecache/60835_7wkeiyd4s4r.gif", 79, 55], ["https://newheaven.nl/files/imagecache/60835_4ycax4rze0t.gif", 74, 32], ["https://newheaven.nl/files/imagecache/60835_lvyj29uy41w.gif", 89, 40], ["https://newheaven.nl/files/imagecache/60835_qpscbjc8np1.gif", 120, 44], ["https://newheaven.nl/files/imagecache/60835_1ze6f5a9qv0.gif", 48, 51], ["https://newheaven.nl/files/imagecache/60835_6p7wagn8zb9.gif", 71, 53], ["https://newheaven.nl/files/imagecache/60835_rn3tshdb8tu.gif", 120, 100], ["https://newheaven.nl/files/imagecache/60835_ycdy3qc1fdp.gif", 93, 54], ["https://newheaven.nl/files/imagecache/60835_ukvaf7lmnx0.gif", 64, 51], ["https://newheaven.nl/files/imagecache/60835_83yak1h0vun.gif", 43, 36], ["https://newheaven.nl/files/imagecache/60835_hase.gif", 74, 54], ["https://newheaven.nl/files/imagecache/60835_chill.gif", 59, 34], ["https://newheaven.nl/files/imagecache/60835_x7y3azegxgz.gif", 19, 18], ["https://newheaven.nl/files/imagecache/60835_gtfqbjst0pm.gif", 77, 30], ["https://newheaven.nl/files/imagecache/60835_ejfsvutvlev.gif", 47, 59], ["https://newheaven.nl/files/imagecache/60835_0foyaxkep1g.gif", 58, 40], ["https://newheaven.nl/files/imagecache/60835_5yg0xzhapod.gif", 86, 86], ["https://newheaven.nl/files/imagecache/60835_ufb3847f1hj.gif", 56, 34]];
 let table1 = null;
 let table2 = null;
 let standardHeight = null;
 const newHeight = 860;
 
-(async function () {
+(function () {
   "use strict";
-  await preloadImages(links);
-
   // uncomment this, if needed:
   // swapInput();
 
@@ -306,15 +102,18 @@ function swapInput() {
 }
 
 async function preloadImages(array) {
+  let s = "";
   for (let i = 0; i < array.length; i++) {
     const e = array[i];
+    let img = new Image();
     await new Promise((resolve, reject) => {
-      let img = new Image();
       img.onload = () => resolve(img);
       img.onerror = reject;
       img.src = e;
     });
+    s += '[ "' + e + '", ' + img.width + ', ' + img.height + ' ], ';
   }
+  console.log(s);
 }
 
 function addPepe() {
@@ -322,15 +121,54 @@ function addPepe() {
   hidePepe();
 }
 
+function getWidth(link) {
+  let w = link[1];
+  let h = link[2];
+  let f = 0.95;
+  if (w >= h) {
+    f *= 20.0 / h;
+  } else {
+    f *= 20.0 / w;
+  }
+  return Math.round(w * f);
+}
+
+function getHeight(link) {
+  let w = link[1];
+  let h = link[2];
+  let f = 0.95;
+  if (w >= h) {
+    f *= 20.0 / h;
+  } else {
+    f *= 20.0 / w;
+  }
+  return Math.round(h * f);
+}
+
 function initLinks() {
   // Should be divisible by 25 without remainder:
   console.log(links.length);
 
+  const w = 25;
+  const h = links.length / w;
+  links.sort(function (a, b) {
+    return getWidth(a) - getWidth(b);
+  });
   let newLinks = [];
-  while (links.length) {
-    newLinks.push(links.splice(0, 25));
+  for (let i = 0; i < h; i++) {
+    for (let j = 0; j < w; j++) {
+      let idx = j * h + i;
+      if (idx < links.length) {
+        newLinks.push(links[idx]);
+      }
+    }
   }
-  links = newLinks;
+
+  let newLinks2 = [];
+  while (newLinks.length) {
+    newLinks2.push(newLinks.splice(0, 25));
+  }
+  links = newLinks2;
 }
 
 function showPepe() {
@@ -346,7 +184,7 @@ function showPepe() {
     let tb = getNthParent(std, 3);
     if (tb != null) {
       initLinks();
-      let rowsToSort = [];
+      let newRows = [];
       let title_index = 1;
       for (let i = 0; i < links.length; i++) {
         const row_e = links[i];
@@ -354,13 +192,13 @@ function showPepe() {
         let tr = document.createElement("tr");
         for (let j = 0; j < row_e.length; j++) {
           const col_e = row_e[j];
-          addTd(tr, col_e, col_e, title_index);
+          addTd(tr, col_e[0], col_e[1], col_e[2], title_index);
           title_index++;
         }
         tb.appendChild(tr);
-        rowsToSort.push(tr);
+        newRows.push(tr);
       }
-      sortTds(rowsToSort);
+      resizeTds(newRows);
 
       let tbl = getNthParent(std, 4);
       if (tbl != null) {
@@ -439,72 +277,22 @@ function getNthParent(elem, i) {
   return getNthParent(elem.parentNode, i - 1);
 }
 
-function addTd(tr, src, text, title) {
+function addTd(tr, src, width, height, title) {
   let td = document.createElement("td");
   let img = document.createElement("img");
   td.style.textAlign = "center";
   td.style.verticalAlign = "middle";
   img.src = src;
-  img.width = 20;
-  img.height = 20;
-  img.setAttribute("onclick", "setTag('[IMG]" + text + "[/IMG]');");
+  img.width = getWidth([0,width,height]);
+  img.height = getHeight([0,width,height]);
+  img.setAttribute("onclick", "setTag('[IMG]" + src + "[/IMG]');");
   img.title = title;
   td.appendChild(img);
   tr.appendChild(td);
-
-  let w = img.naturalWidth;
-  if (w == 0) w = 20;
-  let h = img.naturalHeight;
-  if (h == 0) h = 20;
-  let f = 0.95;
-  if (w >= h) {
-    f *= 20.0 / h;
-  } else {
-    f *= 20.0 / w;
-  }
-  img.width = Math.round(w * f);
-  img.height = Math.round(h * f);
 }
 
-function sortTds(rows) {
-  const w = rows[0].cells.length;
-  const h = rows.length;
-  let allCells = [];
+function resizeTds(rows) {
   for (let i = 0; i < rows.length; i++) {
-    for (let j = 0; j < rows[i].cells.length; j++) {
-      allCells.push(rows[i].cells[j].cloneNode(true));
-    }
-  }
-  allCells.sort(function (a, b) {
-    return a.firstChild.width - b.firstChild.width;
-  });
-  const jw = h;
-  let newCells = [];
-  for (let i = 0; i < h; i++) {
-    for (let j = 0; j < w; j++) {
-      let idx = j * jw + i;
-      if (idx < allCells.length) {
-        newCells.push(allCells[idx]);
-      }
-    }
-  }
-  for (let i = 0; i < h; i++) {
-    let r = rows[i];
-    while (r.cells.length > 0) {
-      r.deleteCell(-1);
-    }
-    for (let j = 0; j < w; j++) {
-      let c = r.insertCell(-1);
-      let idx = i * w + j;
-      if (idx < newCells.length) {
-        c.innerHTML = newCells[idx].innerHTML;
-      } else {
-        c.innerHTML = newCells[0].innerHTML;
-      }
-    }
-  }
-
-  for (let i = 0; i < h; i++) {
     let r = rows[i];
     while (r.cells.length < 30) {
       r.insertCell(-1);
