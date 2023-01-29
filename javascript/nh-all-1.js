@@ -217,21 +217,16 @@ let table2 = null;
 let standardHeight = null;
 const newHeight = 860;
 
-(function () {
+(async function () {
   "use strict";
-  preloadImages(links);
-  window.addEventListener(
-    "load",
-    function () {
-      // uncomment this, if needed:
-      // swapInput();
+  await preloadImages(links);
 
-      addPepe();
-      add_4k();
-      addSwitchStyle();
-    },
-    false
-  );
+  // uncomment this, if needed:
+  // swapInput();
+
+  addPepe();
+  add_4k();
+  addSwitchStyle();
 })();
 
 function addSwitchStyle() {
@@ -310,23 +305,15 @@ function swapInput() {
   }
 }
 
-function preloadImages(array) {
-  if (!preloadImages.list) {
-    preloadImages.list = [];
-  }
-  var list = preloadImages.list;
-  for (var i = 0; i < array.length; i++) {
-    var img = new Image();
-    img.onload = function () {
-      var index = list.indexOf(this);
-      if (index !== -1) {
-        // remove image from the array once it's loaded
-        // for memory consumption reasons
-        list.splice(index, 1);
-      }
-    };
-    list.push(img);
-    img.src = array[i];
+async function preloadImages(array) {
+  for (let i = 0; i < array.length; i++) {
+    const e = array[i];
+    await new Promise((resolve, reject) => {
+      let img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = reject;
+      img.src = e;
+    });
   }
 }
 
