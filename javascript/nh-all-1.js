@@ -418,11 +418,11 @@ function showPepe() {
     if (tbl != null) {
       tbl.rows[5].deleteCell(-1);
       let newRows = [];
-      for (let i = 1; i < 6; i+=2) {
+      for (let i = 1; i < 6; i += 2) {
         newRows.push(tbl.rows[i]);
       }
-      rearrangeCells(newRows, [2,2,3]);
-    
+      rearrangeCells(newRows, [2, 2, 3]);
+
       table1 = tbl.cloneNode(true);
     }
   }
@@ -606,7 +606,7 @@ function rearrangeCells(rows, spans) {
       }
       for (let j = 0; j < w; j++) {
         let c = r.insertCell(-1);
-        c.innerHTML = newCells[i*w+j].innerHTML;
+        c.innerHTML = newCells[i * w + j].innerHTML;
         c.style.textAlign = "center";
         c.style.verticalAlign = "middle";
       }
