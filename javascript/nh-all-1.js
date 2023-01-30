@@ -293,7 +293,11 @@ function initLinks() {
 
   while (links.length % rowElements != 0) {
     // Placeholder img:
-    links.push(["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18]);
+    links.push([
+      "https://newheaven.nl/themes/default/images/smilies/smile1.gif",
+      18,
+      18,
+    ]);
   }
 
   const w = rowElements;
@@ -542,7 +546,7 @@ function addSwitchStyle() {
       select.value = 9;
     }
   }
-  
+
   if (localStorage.shouldStyleSet == 1) {
     setStyle();
   }
