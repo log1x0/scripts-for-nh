@@ -229,106 +229,24 @@ let links = [
   ["https://newheaven.nl/files/imagecache/60835_9cyu4mtxve8.gif", 43, 39],
   ["https://newheaven.nl/files/imagecache/60835_o018f09hkfs.gif", 26, 22],
   ["https://newheaven.nl/files/imagecache/60835_kjcq2pi9lq6.gif", 45, 50],
-  // Placeholder:
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
+  // Add your own imgs here:
 ];
 let table1 = null;
 let table2 = null;
 let standardHeight = null;
-const newHeight = 900;
-const scalar = 0.9;
+const newHeight = 950;
+const rowElements = 24;
+const scalar = 1.1;
 
 (function () {
   "use strict";
-  // uncomment this, if needed:
-  // swapInput();
+  // (un)comment this line, if needed:
+  swapInput();
 
   addPepe();
   add_4k();
   addSwitchStyle();
 })();
-
-function addSwitchStyle() {
-  let select = document.querySelector('select[name="theme"]');
-  if (select != null) {
-    let opt = document.createElement("option");
-    opt.value = 9;
-    opt.innerHTML = "Custom by Logi";
-    select.onchange = styleClick;
-    select.appendChild(opt);
-    if (localStorage.shouldStyleSet && localStorage.shouldStyleSet == 1) {
-      select.value = 9;
-    }
-  }
-  if (!localStorage.shouldStyleSet) {
-    // init:
-    localStorage.shouldStyleSet = 0;
-  }
-  if (localStorage.shouldStyleSet == 1) {
-    setStyle();
-  }
-}
-
-function styleClick() {
-  let select = document.querySelector('select[name="theme"]');
-  if (localStorage.shouldStyleSet && select != null && select.value == 9) {
-    // select black & white... select Logi... and reload site again...:
-    localStorage.shouldStyleSet = 0;
-    select.value = 1;
-    document.detailbox.submit();
-    localStorage.shouldStyleSet = 1;
-    select.value = 9;
-    setStyle();
-  } else {
-    localStorage.shouldStyleSet = 0;
-    document.detailbox.submit();
-  }
-}
-
-function setStyle() {
-  // choose background color:
-  let color1 = "#454545";
-  // let color1 = "SlateGray";
-
-  let color2 = "LightGray";
-  let color3 = "#DDCCBB";
-  document.body.style.backgroundColor = color1;
-  document.querySelectorAll(".column1, .column2").forEach((e) => {
-    e.style.background = color1;
-  });
-  document.querySelectorAll("td").forEach((e) => {
-    e.style.color = color2;
-  });
-  document.querySelectorAll("a, font").forEach((e) => {
-    e.style.color = color3;
-  });
-  document.querySelectorAll(".user_class, .vip_class").forEach((e) => {
-    e.style.color = color3;
-  });
-  document.querySelectorAll(".framecorner, .framebar").forEach((e) => {
-    e.style.backgroundImage = "none";
-  });
-
-  // uncomment this, if the font size should be increased:
-  // document.querySelectorAll("font, td").forEach(e => { e.style.fontSize = "9pt" });
-}
 
 function swapInput() {
   let msg = document.querySelector("#message");
@@ -339,21 +257,6 @@ function swapInput() {
     let row2 = tbl.insertRow(-1);
     row2.innerHTML = row1.innerHTML;
   }
-}
-
-async function preloadImages(array) {
-  let s = "";
-  for (let i = 0; i < array.length; i++) {
-    const e = array[i];
-    let img = new Image();
-    await new Promise((resolve, reject) => {
-      img.onload = () => resolve(img);
-      img.onerror = reject;
-      img.src = e;
-    });
-    s += '[ "' + e + '", ' + img.width + ", " + img.height + " ], ";
-  }
-  console.log(s);
 }
 
 function addPepe() {
@@ -386,10 +289,14 @@ function getHeight(link) {
 }
 
 function initLinks() {
-  // Should be divisible by 25 without remainder:
   console.log(links.length);
 
-  const w = 25;
+  while (links.length % rowElements != 0) {
+    // Placeholder img:
+    links.push(["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18]);
+  }
+
+  const w = rowElements;
   const h = links.length / w;
   links.sort(function (a, b) {
     return getWidth(a) - getWidth(b);
@@ -406,7 +313,7 @@ function initLinks() {
 
   let newLinks2 = [];
   while (newLinks.length) {
-    newLinks2.push(newLinks.splice(0, 25));
+    newLinks2.push(newLinks.splice(0, w));
   }
   links = newLinks2;
 }
@@ -421,7 +328,7 @@ function showPepe() {
       for (let i = 1; i < 6; i += 2) {
         newRows.push(tbl.rows[i]);
       }
-      rearrangeCells(newRows, [2, 2, 3]);
+      rearrangeCells(newRows);
 
       table1 = tbl.cloneNode(true);
     }
@@ -439,7 +346,7 @@ function showPepe() {
         let tr = document.createElement("tr");
         for (let j = 0; j < row_e.length; j++) {
           const col_e = row_e[j];
-          addTd(tr, col_e[0], col_e[1], col_e[2], title_index);
+          addTd(tr, col_e, title_index);
           title_index++;
         }
         tb.appendChild(tr);
@@ -493,6 +400,30 @@ function hidePepe() {
   }
 }
 
+function getNthParent(elem, i) {
+  if (elem == null) {
+    return null;
+  }
+  if (i <= 0) {
+    return elem;
+  }
+  return getNthParent(elem.parentNode, i - 1);
+}
+
+function addTd(tr, link, title) {
+  let td = document.createElement("td");
+  let img = document.createElement("img");
+  td.style.textAlign = "center";
+  td.style.verticalAlign = "middle";
+  img.src = link[0];
+  img.width = getWidth(link);
+  img.height = getHeight(link);
+  img.setAttribute("onclick", "setTag('[IMG]" + link[0] + "[/IMG]');");
+  img.title = title;
+  td.appendChild(img);
+  tr.appendChild(td);
+}
+
 function addSwitch(mode, index) {
   let std = document.querySelector('[title=":)"]');
   let tbl = getNthParent(std, 4);
@@ -514,51 +445,20 @@ function addSwitch(mode, index) {
   }
 }
 
-function getNthParent(elem, i) {
-  if (elem == null) {
-    return null;
-  }
-  if (i <= 0) {
-    return elem;
-  }
-  return getNthParent(elem.parentNode, i - 1);
-}
-
-function addTd(tr, src, width, height, title) {
-  let td = document.createElement("td");
-  let img = document.createElement("img");
-  td.style.textAlign = "center";
-  td.style.verticalAlign = "middle";
-  img.src = src;
-  img.width = getWidth([0, width, height]);
-  img.height = getHeight([0, width, height]);
-  img.setAttribute("onclick", "setTag('[IMG]" + src + "[/IMG]');");
-  img.title = title;
-  td.appendChild(img);
-  tr.appendChild(td);
-}
-
 function resizeTds(rows) {
+  const diff = 30 - rowElements;
+  const low = Math.floor(diff / 4.0) + 1;
+  const hei = Math.ceil(diff / 4.0) + 1;
   for (let i = 0; i < rows.length; i++) {
     let r = rows[i];
     while (r.cells.length < 30) {
       r.insertCell(-1);
     }
-    r.cells[22].colSpan = "2";
-    r.cells[23].colSpan = "3";
-    r.cells[24].colSpan = "3";
+    r.cells[rowElements - 4].colSpan = low;
+    r.cells[rowElements - 3].colSpan = low;
+    r.cells[rowElements - 2].colSpan = hei;
+    r.cells[rowElements - 1].colSpan = hei;
   }
-}
-
-function add_4k() {
-  document.querySelectorAll("img").forEach((e) => {
-    if (e.src == "https://newheaven.nl/images/categories/9/2_109.gif") {
-      e.src = "https://newheaven.nl/files/imagecache/63726_29907_2160p.png";
-    }
-    if (e.src == "https://newheaven.nl/images/categories/9/4_110.gif") {
-      e.src = "https://newheaven.nl/files/imagecache/63726_29907_2160p_TV.png";
-    }
-  });
 }
 
 function getWidthImg(img) {
@@ -576,7 +476,7 @@ function getWidthImg(img) {
   return 30;
 }
 
-function rearrangeCells(rows, spans) {
+function rearrangeCells(rows) {
   if (rows.length > 0) {
     let w = rows[0].cells.length;
     let h = rows.length;
@@ -611,18 +511,82 @@ function rearrangeCells(rows, spans) {
         c.style.verticalAlign = "middle";
       }
     }
-    // for (let i = 0; i < spans.length; i++) {
-    //   let j = w - spans.length + i;
-    //   let n = spans[i] - 1;
-    //   while (n > 0) {
-    //     for (let k = 0; k < h; k++) {
-    //       rows[k].insertCell(-1);
-    //     }
-    //     n--;
-    //   }
-    //   for (let k = 0; k < h; k++) {
-    //     rows[k].cells[j].colSpan = spans[i];
-    //   }
-    // }
   }
+}
+
+function add_4k() {
+  document.querySelectorAll("img").forEach((e) => {
+    if (e.src == "https://newheaven.nl/images/categories/9/2_109.gif") {
+      e.src = "https://newheaven.nl/files/imagecache/63726_29907_2160p.png";
+    }
+    if (e.src == "https://newheaven.nl/images/categories/9/4_110.gif") {
+      e.src = "https://newheaven.nl/files/imagecache/63726_29907_2160p_TV.png";
+    }
+  });
+}
+
+function addSwitchStyle() {
+  if (!localStorage.shouldStyleSet) {
+    // init:
+    localStorage.shouldStyleSet = 0;
+  }
+
+  let select = document.querySelector('select[name="theme"]');
+  if (select != null) {
+    let opt = document.createElement("option");
+    opt.value = 9;
+    opt.innerHTML = "Custom by Logi";
+    select.onchange = styleClick;
+    select.appendChild(opt);
+    if (localStorage.shouldStyleSet == 1) {
+      select.value = 9;
+    }
+  }
+  
+  if (localStorage.shouldStyleSet == 1) {
+    setStyle();
+  }
+}
+
+function styleClick() {
+  let select = document.querySelector('select[name="theme"]');
+  if (localStorage.shouldStyleSet && select != null && select.value == 9) {
+    localStorage.shouldStyleSet = 0;
+    select.value = 1;
+    document.detailbox.submit();
+    localStorage.shouldStyleSet = 1;
+    select.value = 9;
+    setStyle();
+  } else {
+    localStorage.shouldStyleSet = 0;
+    document.detailbox.submit();
+  }
+}
+
+function setStyle() {
+  // choose background color:
+  let color1 = "#454545";
+  // let color1 = "SlateGray";
+
+  let color2 = "LightGray";
+  let color3 = "#DDCCBB";
+  document.body.style.backgroundColor = color1;
+  document.querySelectorAll(".column1, .column2").forEach((e) => {
+    e.style.background = color1;
+  });
+  document.querySelectorAll("td").forEach((e) => {
+    e.style.color = color2;
+  });
+  document.querySelectorAll("a, font").forEach((e) => {
+    e.style.color = color3;
+  });
+  document.querySelectorAll(".user_class, .vip_class").forEach((e) => {
+    e.style.color = color3;
+  });
+  document.querySelectorAll(".framecorner, .framebar").forEach((e) => {
+    e.style.backgroundImage = "none";
+  });
+
+  // uncomment this, if the font size should be increased:
+  // document.querySelectorAll("font, td").forEach(e => { e.style.fontSize = "9pt" });
 }
