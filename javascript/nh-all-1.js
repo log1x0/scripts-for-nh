@@ -169,7 +169,11 @@ let links = [
   ["https://newheaven.nl/files/imagecache/63837_hmmm.gif", 25, 23],
   ["https://newheaven.nl/files/imagecache/63837_0538.gif", 60, 55],
   ["https://newheaven.nl/files/imagecache/63837_furz.gif", 37, 25],
-  ["https://newheaven.nl/files/imagecache/63837_e61196ed2593a051ea628db21e0c8d1f.gif", 50, 22],
+  [
+    "https://newheaven.nl/files/imagecache/63837_e61196ed2593a051ea628db21e0c8d1f.gif",
+    50,
+    22,
+  ],
   [
     "https://newheaven.nl/files/imagecache/63837_7b3cdb2918bc7511686ccfbd5ab0870c.gif",
     66,
