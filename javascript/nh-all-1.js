@@ -143,7 +143,7 @@ let links = [
   ["https://newheaven.nl/files/imagecache/63837_pirate2.gif", 25, 25],
   ["https://newheaven.nl/files/imagecache/63837_wave2.gif", 26, 18],
   ["https://newheaven.nl/files/imagecache/63837_0579.gif", 34, 26],
-  ["https://newheaven.nl/files/imagecache/63837_0529.gif", 113, 65],
+  ["https://newheaven.nl/files/imagecache/63837_0581.gif", 113, 65],
   ["https://newheaven.nl/files/imagecache/63837_0564.gif", 109, 33],
   ["https://newheaven.nl/files/imagecache/63837_santa.gif", 20, 22],
   ["https://newheaven.nl/files/imagecache/63837_user%20delete.gif", 80, 80],
@@ -154,7 +154,7 @@ let links = [
   ],
   ["https://newheaven.nl/files/imagecache/63837_rarschleppen.gif", 24, 42],
   [
-    "https://newheaven.nl/files/imagecache/63837_3e22be6fc7ac0a317defd06f7d4a87de.gif",
+    "https://newheaven.nl/files/imagecache/63837_2d2a5515902de4c05b1cx42.gif",
     75,
     86,
   ],
@@ -169,7 +169,7 @@ let links = [
   ["https://newheaven.nl/files/imagecache/63837_hmmm.gif", 25, 23],
   ["https://newheaven.nl/files/imagecache/63837_0538.gif", 60, 55],
   ["https://newheaven.nl/files/imagecache/63837_furz.gif", 37, 25],
-  ["https://newheaven.nl/files/imagecache/63837_0441.gif", 50, 22],
+  ["https://newheaven.nl/files/imagecache/63837_e61196ed2593a051ea628db21e0c8d1f.gif", 50, 22],
   [
     "https://newheaven.nl/files/imagecache/63837_7b3cdb2918bc7511686ccfbd5ab0870c.gif",
     66,
