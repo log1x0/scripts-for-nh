@@ -370,11 +370,10 @@ let links = [
   ["https://newheaven.nl/themes/default/images/smilies/greedy.gif", 18, 18],
   ["https://newheaven.nl/themes/default/images/smilies/dumbells.gif", 32, 18],
   ["https://newheaven.nl/themes/default/images/smilies/clover.gif", 37, 32],
-  ["https://newheaven.nl/themes/default/images/smilies/shit.gif", 16, 16],
+
   ["https://newheaven.nl/themes/default/images/smilies/uglywoot.gif", 41, 46],
   ["https://newheaven.nl/themes/default/images/smilies/uangel.gif", 30, 23],
-  ["https://newheaven.nl/themes/default/images/smilies/u_ani.gif", 45, 16],
-  ["https://newheaven.nl/themes/default/images/smilies/uapplaus.gif", 16, 23],
+
   ["https://newheaven.nl/themes/default/images/smilies/ustone.gif", 16, 15],
   ["https://newheaven.nl/themes/default/images/smilies/uzzz.gif", 16, 30],
   ["https://newheaven.nl/themes/default/images/smilies/usorry.gif", 50, 24],
@@ -383,26 +382,14 @@ let links = [
   ["https://newheaven.nl/themes/default/images/smilies/uwave.gif", 25, 16],
   ["https://newheaven.nl/themes/default/images/smilies/uno.gif", 32, 22],
   ["https://newheaven.nl/themes/default/images/smilies/urock.gif", 29, 25],
-  ["https://newheaven.nl/themes/default/images/smilies/usad.gif", 16, 16],
-  ["https://newheaven.nl/themes/default/images/smilies/ulol.gif", 59, 50],
+
   ["https://newheaven.nl/themes/default/images/smilies/ulove.gif", 16, 25],
-  ["https://newheaven.nl/themes/default/images/smilies/umad.gif", 20, 20],
-  ["https://newheaven.nl/themes/default/images/smilies/uglyla.gif", 16, 21],
-  ["https://newheaven.nl/themes/default/images/smilies/ugruebel.gif", 16, 20],
-  ["https://newheaven.nl/themes/default/images/smilies/ulaugh.gif", 16, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/ufinger.gif", 38, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/ugly.gif", 16, 16],
-  ["https://newheaven.nl/themes/default/images/smilies/uglyirre.gif", 48, 16],
-  ["https://newheaven.nl/themes/default/images/smilies/udomina.gif", 51, 16],
-  ["https://newheaven.nl/themes/default/images/smilies/udruff.gif", 16, 16],
-  ["https://newheaven.nl/themes/default/images/smilies/ueye.gif", 16, 16],
-  ["https://newheaven.nl/themes/default/images/smilies/ubad.gif", 16, 16],
-  ["https://newheaven.nl/themes/default/images/smilies/ubigboy.gif", 64, 16],
+
   ["https://newheaven.nl/themes/default/images/smilies/uball.gif", 25, 49],
   ["https://newheaven.nl/themes/default/images/smilies/ubuschmann.gif", 23, 34],
-  ["https://newheaven.nl/themes/default/images/smilies/uauge.gif", 22, 22],
+
   ["https://newheaven.nl/themes/default/images/smilies/stockpieks.gif", 60, 20],
-  ["https://newheaven.nl/themes/default/images/smilies/oO.gif", 15, 16],
+
   [
     "https://newheaven.nl/themes/default/images/smilies/popoklatsch.gif",
     48,
@@ -428,8 +415,8 @@ let links = [
   // Add your own imgs here:
 ];
 let orgTable = null;
-const standardHeight = 600;
-const newHeight = 1200;
+const standardHeight = 550;
+const newHeight = 1175;
 const rowElements = 24;
 const scalar = 1.1;
 
