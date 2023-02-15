@@ -442,11 +442,11 @@ function swapInput() {
 }
 
 function removeHints() {
-    let std = getFirstSmiley();
-    let tbl = getNthParent(std, 7);
-    if (tbl != null && tbl.rows.length >= 1) {
-        tbl.rows[1].innerHTML = "<hr>";
-    }
+  let std = getFirstSmiley();
+  let tbl = getNthParent(std, 7);
+  if (tbl != null && tbl.rows.length >= 1) {
+    tbl.rows[1].innerHTML = "<hr>";
+  }
 }
 
 function addPepe() {
