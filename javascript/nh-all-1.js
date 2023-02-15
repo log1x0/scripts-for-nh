@@ -373,7 +373,7 @@ let links = [
   ["https://newheaven.nl/themes/default/images/smilies/shit.gif", 16, 16],
   ["https://newheaven.nl/themes/default/images/smilies/uglywoot.gif", 41, 46],
   ["https://newheaven.nl/themes/default/images/smilies/uangel.gif", 30, 23],
-  ["https://newheaven.nl/themes/default/images/smilies/u_ani.gif", 45, 16],
+  
   ["https://newheaven.nl/themes/default/images/smilies/uapplaus.gif", 16, 23],
   ["https://newheaven.nl/themes/default/images/smilies/ustone.gif", 16, 15],
   ["https://newheaven.nl/themes/default/images/smilies/uzzz.gif", 16, 30],
@@ -390,10 +390,10 @@ let links = [
   ["https://newheaven.nl/themes/default/images/smilies/uglyla.gif", 16, 21],
   ["https://newheaven.nl/themes/default/images/smilies/ugruebel.gif", 16, 20],
   ["https://newheaven.nl/themes/default/images/smilies/ulaugh.gif", 16, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/ufinger.gif", 38, 18],
+  
   ["https://newheaven.nl/themes/default/images/smilies/ugly.gif", 16, 16],
-  ["https://newheaven.nl/themes/default/images/smilies/uglyirre.gif", 48, 16],
-  ["https://newheaven.nl/themes/default/images/smilies/udomina.gif", 51, 16],
+  
+  
   ["https://newheaven.nl/themes/default/images/smilies/udruff.gif", 16, 16],
   ["https://newheaven.nl/themes/default/images/smilies/ueye.gif", 16, 16],
   ["https://newheaven.nl/themes/default/images/smilies/ubad.gif", 16, 16],
