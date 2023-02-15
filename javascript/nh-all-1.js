@@ -231,11 +231,7 @@ let links = [
   ["https://newheaven.nl/files/imagecache/60835_o018f09hkfs.gif", 26, 22],
   ["https://newheaven.nl/files/imagecache/60835_kjcq2pi9lq6.gif", 45, 50],
   // Default imgs:
-  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/wink.gif", 20, 20],
-  ["https://newheaven.nl/themes/default/images/smilies/grin.gif", 18, 18],
-  ["https://newheaven.nl/themes/default/images/smilies/tongue.gif", 20, 20],
-  ["https://newheaven.nl/themes/default/images/smilies/sad.gif", 18, 18],
+  
   ["https://newheaven.nl/themes/default/images/smilies/cry.gif", 20, 20],
   [
     "https://newheaven.nl/themes/default/images/smilies/noexpression.gif",
