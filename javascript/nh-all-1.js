@@ -144,17 +144,9 @@ let links = [
   ["files/imagecache/63837_0564.gif", 109, 33],
   ["files/imagecache/63837_santa.gif", 20, 22],
   ["files/imagecache/63837_user%20delete.gif", 80, 80],
-  [
-    "files/imagecache/63837_97c4247b2d741ff6c721f26cda5a48ef.gif",
-    69,
-    46,
-  ],
+  ["files/imagecache/63837_97c4247b2d741ff6c721f26cda5a48ef.gif", 69, 46],
   ["files/imagecache/63837_rarschleppen.gif", 24, 42],
-  [
-    "files/imagecache/63837_2d2a5515902de4c05b1cx42.gif",
-    27,
-    24,
-  ],
+  ["files/imagecache/63837_2d2a5515902de4c05b1cx42.gif", 27, 24],
   ["files/imagecache/63837_rip.gif", 43, 34],
   ["files/imagecache/63837_censored.gif", 48, 18],
   ["files/imagecache/63837_0424.gif", 43, 27],
@@ -166,16 +158,8 @@ let links = [
   ["files/imagecache/63837_hmmm.gif", 25, 23],
   ["files/imagecache/63837_0538.gif", 60, 55],
   ["files/imagecache/63837_furz.gif", 37, 25],
-  [
-    "files/imagecache/63837_e61196ed2593a051ea628db21e0c8d1f.gif",
-    90,
-    70,
-  ],
-  [
-    "files/imagecache/63837_7b3cdb2918bc7511686ccfbd5ab0870c.gif",
-    66,
-    26,
-  ],
+  ["files/imagecache/63837_e61196ed2593a051ea628db21e0c8d1f.gif", 90, 70],
+  ["files/imagecache/63837_7b3cdb2918bc7511686ccfbd5ab0870c.gif", 66, 26],
   ["files/imagecache/60835_yovyor4rxqf.gif", 50, 40],
   ["files/imagecache/60835_am7sukwngj.gif", 188, 46],
   ["files/imagecache/60835_korx8xguvk2.gif", 153, 29],
@@ -233,11 +217,7 @@ let links = [
   // Default imgs:
 
   ["themes/default/images/smilies/cry.gif", 20, 20],
-  [
-    "themes/default/images/smilies/noexpression.gif",
-    18,
-    18,
-  ],
+  ["themes/default/images/smilies/noexpression.gif", 18, 18],
   ["themes/default/images/smilies/confused.gif", 18, 18],
   ["themes/default/images/smilies/ohmy.gif", 18, 18],
   ["themes/default/images/smilies/cool1.gif", 18, 18],
@@ -325,11 +305,7 @@ let links = [
   ["themes/default/images/smilies/icecream.gif", 22, 25],
   ["themes/default/images/smilies/oldtimer.gif", 28, 29],
   ["themes/default/images/smilies/wolverine.gif", 20, 20],
-  [
-    "themes/default/images/smilies/strongbench.gif",
-    40,
-    21,
-  ],
+  ["themes/default/images/smilies/strongbench.gif", 40, 21],
   ["themes/default/images/smilies/weakbench.gif", 35, 21],
   ["themes/default/images/smilies/bike.gif", 31, 31],
   ["themes/default/images/smilies/music.gif", 26, 24],
@@ -377,19 +353,11 @@ let links = [
   ["themes/default/images/smilies/uball.gif", 25, 49],
   ["themes/default/images/smilies/ubuschmann.gif", 23, 34],
   ["themes/default/images/smilies/stockpieks.gif", 60, 20],
-  [
-    "themes/default/images/smilies/popoklatsch.gif",
-    48,
-    40,
-  ],
+  ["themes/default/images/smilies/popoklatsch.gif", 48, 40],
   ["themes/default/images/smilies/knutschi.gif", 44, 18],
   ["themes/default/images/smilies/narf.gif", 18, 18],
   ["themes/default/images/smilies/2uglys.gif", 59, 50],
-  [
-    "themes/default/images/smilies/kakapferdchen.gif",
-    56,
-    66,
-  ],
+  ["themes/default/images/smilies/kakapferdchen.gif", 56, 66],
   ["themes/default/images/smilies/brrr.gif", 26, 32],
   ["themes/default/images/smilies/blol2.gif", 29, 27],
   ["themes/default/images/smilies/beek.gif", 15, 15],
@@ -449,7 +417,7 @@ function addPepe() {
 }
 
 function initPepe() {
-    if (orgTable == null) {
+  if (orgTable == null) {
     let std = getFirstSmiley();
     let tbl = getNthParent(std, 4);
     if (tbl != null) {
@@ -488,10 +456,10 @@ function getHeight(link) {
 }
 
 function initLinks() {
-    for (let i = 0; i < links.length; i++) {
-        const e = links[i];
-        e[0] = "https://newheaven.nl/"+e[0];
-    }
+  for (let i = 0; i < links.length; i++) {
+    const e = links[i];
+    e[0] = "https://newheaven.nl/" + e[0];
+  }
 
   const w = rowElements;
   const h = Math.ceil(links.length / w);
