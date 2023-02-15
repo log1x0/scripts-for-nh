@@ -409,7 +409,6 @@ let links = [
   ["https://newheaven.nl/files/imagecache/63733_Smoking.gif", 28, 28],
   ["https://newheaven.nl/files/imagecache/63733_spongbob_party.gif", 28, 28],
   ["https://newheaven.nl/files/imagecache/63733_Spongebob.gif", 28, 28],
-
 ];
 let orgTable = null;
 const standardHeight = 550;
@@ -476,10 +475,10 @@ function getHeight(link) {
 }
 
 function initLinks() {
-    const w = rowElements;
-    const h = Math.ceil( links.length / w);
-    console.log(w, h, links.length);
-  while (links.length < w*h) {
+  const w = rowElements;
+  const h = Math.ceil(links.length / w);
+  console.log(w, h, links.length);
+  while (links.length < w * h) {
     // Placeholder img (transparent):
     links.push([
       "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==",
