@@ -413,6 +413,11 @@ let links = [
   ["https://newheaven.nl/themes/default/images/smilies/bbaby.gif", 15, 15],
   ["https://newheaven.nl/themes/default/images/smilies/pullcar.gif", 120, 38],
   // Add your own imgs here:
+  ["https://newheaven.nl/files/imagecache/63733_Bouncing_Kirby.gif", 28, 28],
+  ["https://newheaven.nl/files/imagecache/63733_Gary.gif", 28, 28],
+  ["https://newheaven.nl/files/imagecache/63733_Smoking.gif", 28, 28],
+  ["https://newheaven.nl/files/imagecache/63733_spongbob_party.gif", 28, 28],
+  ["https://newheaven.nl/files/imagecache/63733_Spongebob.gif", 28, 28],
 ];
 let orgTable = null;
 const standardHeight = 550;
@@ -482,9 +487,9 @@ function initLinks() {
   console.log(links.length);
 
   while (links.length % rowElements != 0) {
-    // Placeholder img:
+    // Placeholder img (transparent):
     links.push([
-      "https://newheaven.nl/themes/default/images/smilies/smile1.gif",
+      "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==",
       18,
       18,
     ]);
