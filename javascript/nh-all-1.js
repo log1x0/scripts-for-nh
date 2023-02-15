@@ -78,7 +78,7 @@ let links = [
   ["https://newheaven.nl/files/imagecache/63733_pepe-070.gif", 28, 28],
   ["https://newheaven.nl/files/imagecache/63733_pepe-071.gif", 88, 19],
   ["https://newheaven.nl/files/imagecache/63733_pepe-072.gif", 48, 30],
-  ["https://newheaven.nl/files/imagecache/63733_pepe-073.gif", 81, 26],
+
   ["https://newheaven.nl/files/imagecache/63733_pepe-074.gif", 40, 25],
   ["https://newheaven.nl/files/imagecache/63733_pepe-075.gif", 18, 18],
   ["https://newheaven.nl/files/imagecache/63733_pepe-076.gif", 41, 40],
@@ -88,7 +88,7 @@ let links = [
   ["https://newheaven.nl/files/imagecache/63733_pepe-094.gif", 36, 26],
   ["https://newheaven.nl/files/imagecache/63733_pepe-109.gif", 32, 32],
   ["https://newheaven.nl/files/imagecache/63733_pepe-121.gif", 32, 32],
-  ["https://newheaven.nl/files/imagecache/63733_pepe-122.gif", 32, 32],
+
   ["https://newheaven.nl/files/imagecache/63733_pepe-123.gif", 32, 32],
   ["https://newheaven.nl/files/imagecache/63733_pepe-124.gif", 32, 32],
   ["https://newheaven.nl/files/imagecache/63733_pepe-125.gif", 32, 32],
@@ -130,7 +130,7 @@ let links = [
   ["https://newheaven.nl/files/imagecache/63733_pepe-161.gif", 64, 64],
   ["https://newheaven.nl/files/imagecache/63733_pepe-163.gif", 64, 64],
   ["https://newheaven.nl/files/imagecache/63733_pepe-164.gif", 64, 64],
-  ["https://newheaven.nl/files/imagecache/63733_pepe-165.gif", 64, 64],
+
   ["https://newheaven.nl/files/imagecache/63733_pepe-159.gif", 64, 64],
   ["https://newheaven.nl/files/imagecache/63837_piratenboot.gif", 140, 130],
   ["https://newheaven.nl/files/imagecache/60835_na6otob9r4t.gif", 23, 29],
@@ -233,12 +233,187 @@ let links = [
   ["https://newheaven.nl/files/imagecache/60835_9cyu4mtxve8.gif", 43, 39],
   ["https://newheaven.nl/files/imagecache/60835_o018f09hkfs.gif", 26, 22],
   ["https://newheaven.nl/files/imagecache/60835_kjcq2pi9lq6.gif", 45, 50],
+  // Default imgs:
+  ["https://newheaven.nl/themes/default/images/smilies/smile1.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/wink.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/grin.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/tongue.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/sad.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/cry.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/noexpression.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/confused.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/ohmy.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/cool1.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/angel.gif", 18, 22],
+  ["https://newheaven.nl/themes/default/images/smilies/sleep.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/angry.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/laugh.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/cool2.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/fun.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/thumbsup.gif", 36, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/thumbsdown.gif", 27, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/blush.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/weep.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/unsure.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/closedeyes.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/yes.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/no.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/kaffee.gif", 32, 32],
+  ["https://newheaven.nl/themes/default/images/smilies/love.gif", 19, 19],
+  ["https://newheaven.nl/themes/default/images/smilies/question.gif", 19, 19],
+  ["https://newheaven.nl/themes/default/images/smilies/excl.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/idea.gif", 19, 19],
+  ["https://newheaven.nl/themes/default/images/smilies/hmm.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/huh.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/w00t.gif", 18, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/geek.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/look.gif", 20, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/rolleyes.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/kiss.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/shifty.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/blink.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/smartass.gif", 25, 22],
+  ["https://newheaven.nl/themes/default/images/smilies/sick.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/crazy.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/wacko.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/alien.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/wizard.gif", 24, 30],
+  ["https://newheaven.nl/themes/default/images/smilies/wave.gif", 26, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/wavecry.gif", 26, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/baby.gif", 20, 22],
+  ["https://newheaven.nl/themes/default/images/smilies/ras.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/sly.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/devil.gif", 18, 23],
+  ["https://newheaven.nl/themes/default/images/smilies/evil.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/evilmad.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/yucky.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/nugget.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/sneaky.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/smart.gif", 18, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/shutup.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/shutup2.gif", 29, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/yikes.gif", 19, 25],
+  ["https://newheaven.nl/themes/default/images/smilies/flowers.gif", 28, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/wub.gif", 22, 29],
+  ["https://newheaven.nl/themes/default/images/smilies/osama.gif", 18, 25],
+  ["https://newheaven.nl/themes/default/images/smilies/saddam.gif", 18, 25],
+  ["https://newheaven.nl/themes/default/images/smilies/santa.gif", 20, 22],
+  ["https://newheaven.nl/themes/default/images/smilies/indian.gif", 24, 29],
+  ["https://newheaven.nl/themes/default/images/smilies/guns.gif", 38, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/crockett.gif", 23, 22],
+  ["https://newheaven.nl/themes/default/images/smilies/zorro.gif", 26, 22],
+  ["https://newheaven.nl/themes/default/images/smilies/snap.gif", 27, 21],
+  ["https://newheaven.nl/themes/default/images/smilies/beer.gif", 59, 21],
+  ["https://newheaven.nl/themes/default/images/smilies/drunk.gif", 58, 30],
+  ["https://newheaven.nl/themes/default/images/smilies/sleeping.gif", 20, 27],
+  ["https://newheaven.nl/themes/default/images/smilies/mama.gif", 18, 32],
+  ["https://newheaven.nl/themes/default/images/smilies/pepsi.gif", 45, 25],
+  ["https://newheaven.nl/themes/default/images/smilies/medieval.gif", 39, 27],
+  ["https://newheaven.nl/themes/default/images/smilies/rambo.gif", 21, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/ninja.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/hannibal.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/party.gif", 18, 25],
+  ["https://newheaven.nl/themes/default/images/smilies/snorkle.gif", 25, 38],
+  ["https://newheaven.nl/themes/default/images/smilies/evo.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/king.gif", 23, 25],
+  ["https://newheaven.nl/themes/default/images/smilies/chef.gif", 23, 28],
+  ["https://newheaven.nl/themes/default/images/smilies/mario.gif", 21, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/pope.gif", 20, 36],
+  ["https://newheaven.nl/themes/default/images/smilies/fez.gif", 19, 24],
+  ["https://newheaven.nl/themes/default/images/smilies/cap.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/cowboy.gif", 22, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/pirate.gif", 20, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/rock.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/cigar.gif", 22, 25],
+  ["https://newheaven.nl/themes/default/images/smilies/icecream.gif", 22, 25],
+  ["https://newheaven.nl/themes/default/images/smilies/oldtimer.gif", 28, 29],
+  ["https://newheaven.nl/themes/default/images/smilies/wolverine.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/strongbench.gif", 40, 21],
+  ["https://newheaven.nl/themes/default/images/smilies/weakbench.gif", 35, 21],
+  ["https://newheaven.nl/themes/default/images/smilies/bike.gif", 31, 31],
+  ["https://newheaven.nl/themes/default/images/smilies/music.gif", 26, 24],
+  ["https://newheaven.nl/themes/default/images/smilies/book.gif", 35, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/fish.gif", 60, 25],
+  ["https://newheaven.nl/themes/default/images/smilies/whistle.gif", 35, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/stupid.gif", 53, 51],
+  ["https://newheaven.nl/themes/default/images/smilies/dots.gif", 46, 51],
+  ["https://newheaven.nl/themes/default/images/smilies/axe.gif", 27, 28],
+  ["https://newheaven.nl/themes/default/images/smilies/hooray.gif", 31, 26],
+  ["https://newheaven.nl/themes/default/images/smilies/yay.gif", 40, 60],
+  ["https://newheaven.nl/themes/default/images/smilies/cake.gif", 28, 25],
+  ["https://newheaven.nl/themes/default/images/smilies/hbd.gif", 81, 26],
+  ["https://newheaven.nl/themes/default/images/smilies/hi.gif", 60, 45],
+  ["https://newheaven.nl/themes/default/images/smilies/offtopic.gif", 44, 49],
+  ["https://newheaven.nl/themes/default/images/smilies/band.gif", 125, 37],
+  ["https://newheaven.nl/themes/default/images/smilies/hump.gif", 80, 24],
+  ["https://newheaven.nl/themes/default/images/smilies/punk.gif", 33, 30],
+  ["https://newheaven.nl/themes/default/images/smilies/bounce.gif", 25, 36],
+  ["https://newheaven.nl/themes/default/images/smilies/group.gif", 70, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/console.gif", 46, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/smurf.gif", 20, 24],
+  ["https://newheaven.nl/themes/default/images/smilies/soldiers.gif", 100, 105],
+  ["https://newheaven.nl/themes/default/images/smilies/spidey.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/rant.gif", 33, 37],
+  ["https://newheaven.nl/themes/default/images/smilies/pimp.gif", 22, 25],
+  ["https://newheaven.nl/themes/default/images/smilies/nuke.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/judge.gif", 30, 26],
+  ["https://newheaven.nl/themes/default/images/smilies/jacko.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/ike.gif", 22, 22],
+  ["https://newheaven.nl/themes/default/images/smilies/greedy.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/dumbells.gif", 32, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/clover.gif", 37, 32],
+  ["https://newheaven.nl/themes/default/images/smilies/shit.gif", 16, 16],
+  ["https://newheaven.nl/themes/default/images/smilies/uglywoot.gif", 41, 46],
+  ["https://newheaven.nl/themes/default/images/smilies/uangel.gif", 30, 23],
+  ["https://newheaven.nl/themes/default/images/smilies/u_ani.gif", 45, 16],
+  ["https://newheaven.nl/themes/default/images/smilies/uapplaus.gif", 16, 23],
+  ["https://newheaven.nl/themes/default/images/smilies/ustone.gif", 16, 15],
+  ["https://newheaven.nl/themes/default/images/smilies/uzzz.gif", 16, 30],
+  ["https://newheaven.nl/themes/default/images/smilies/usorry.gif", 50, 24],
+  ["https://newheaven.nl/themes/default/images/smilies/usanta.gif", 30, 30],
+  ["https://newheaven.nl/themes/default/images/smilies/usex.gif", 29, 31],
+  ["https://newheaven.nl/themes/default/images/smilies/uwave.gif", 25, 16],
+  ["https://newheaven.nl/themes/default/images/smilies/uno.gif", 32, 22],
+  ["https://newheaven.nl/themes/default/images/smilies/urock.gif", 29, 25],
+  ["https://newheaven.nl/themes/default/images/smilies/usad.gif", 16, 16],
+  ["https://newheaven.nl/themes/default/images/smilies/ulol.gif", 59, 50],
+  ["https://newheaven.nl/themes/default/images/smilies/ulove.gif", 16, 25],
+  ["https://newheaven.nl/themes/default/images/smilies/umad.gif", 20, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/uglyla.gif", 16, 21],
+  ["https://newheaven.nl/themes/default/images/smilies/ugruebel.gif", 16, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/ulaugh.gif", 16, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/ufinger.gif", 38, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/ugly.gif", 16, 16],
+  ["https://newheaven.nl/themes/default/images/smilies/uglyirre.gif", 48, 16],
+  ["https://newheaven.nl/themes/default/images/smilies/udomina.gif", 51, 16],
+  ["https://newheaven.nl/themes/default/images/smilies/udruff.gif", 16, 16],
+  ["https://newheaven.nl/themes/default/images/smilies/ueye.gif", 16, 16],
+  ["https://newheaven.nl/themes/default/images/smilies/ubad.gif", 16, 16],
+  ["https://newheaven.nl/themes/default/images/smilies/ubigboy.gif", 64, 16],
+  ["https://newheaven.nl/themes/default/images/smilies/uball.gif", 25, 49],
+  ["https://newheaven.nl/themes/default/images/smilies/ubuschmann.gif", 23, 34],
+  ["https://newheaven.nl/themes/default/images/smilies/uauge.gif", 22, 22],
+  ["https://newheaven.nl/themes/default/images/smilies/stockpieks.gif", 60, 20],
+  ["https://newheaven.nl/themes/default/images/smilies/oO.gif", 15, 16],
+  ["https://newheaven.nl/themes/default/images/smilies/popoklatsch.gif", 48, 40],
+  ["https://newheaven.nl/themes/default/images/smilies/knutschi.gif", 44, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/narf.gif", 18, 18],
+  ["https://newheaven.nl/themes/default/images/smilies/2uglys.gif", 59, 50],
+  ["https://newheaven.nl/themes/default/images/smilies/kakapferdchen.gif", 56, 66],
+  ["https://newheaven.nl/themes/default/images/smilies/brrr.gif", 26, 32],
+  ["https://newheaven.nl/themes/default/images/smilies/blol2.gif", 29, 27],
+  ["https://newheaven.nl/themes/default/images/smilies/beek.gif", 15, 15],
+  ["https://newheaven.nl/themes/default/images/smilies/bevil.gif", 15, 15],
+  ["https://newheaven.nl/themes/default/images/smilies/bcool.gif", 15, 15],
+  ["https://newheaven.nl/themes/default/images/smilies/bcrying.gif", 15, 15],
+  ["https://newheaven.nl/themes/default/images/smilies/Basi.gif", 50, 40],
+  ["https://newheaven.nl/themes/default/images/smilies/bbaby.gif", 15, 15],
+  ["https://newheaven.nl/themes/default/images/smilies/pullcar.gif", 120, 38],
   // Add your own imgs here:
 ];
-let table1 = null;
-let table2 = null;
-let standardHeight = null;
-const newHeight = 950;
+let orgTable = null;
+const standardHeight = 600;
+const newHeight = 1200;
 const rowElements = 24;
 const scalar = 1.1;
 
@@ -326,79 +501,58 @@ function initLinks() {
   links = newLinks2;
 }
 
+function getFirstSmiley() {
+  return document.querySelector('[title=":)"]');
+}
+
 function showPepe() {
-  if (table1 == null) {
-    let std = document.querySelector('[title=":)"]');
+  if (orgTable == null) {
+    let std = getFirstSmiley();
     let tbl = getNthParent(std, 4);
     if (tbl != null) {
-      tbl.rows[5].deleteCell(-1);
-      let newRows = [];
-      for (let i = 1; i < 6; i += 2) {
-        newRows.push(tbl.rows[i]);
+      for (let i = 5; i >= 2; i--) {
+        tbl.deleteRow(i);
       }
-      rearrangeCells(newRows);
-
-      table1 = tbl.cloneNode(true);
+      orgTable = tbl.cloneNode(true);
     }
+
+    initLinks();
   }
-  if (table2 == null) {
-    let std = document.querySelector('[title=":)"]');
-    let tb = getNthParent(std, 3);
-    if (tb != null) {
-      initLinks();
-      let newRows = [];
-      let title_index = 1;
-      for (let i = 0; i < links.length; i++) {
-        const row_e = links[i];
-        tb.appendChild(document.createElement("tr"));
-        let tr = document.createElement("tr");
-        for (let j = 0; j < row_e.length; j++) {
-          const col_e = row_e[j];
-          addTd(tr, col_e, title_index);
-          title_index++;
-        }
-        tb.appendChild(tr);
-        newRows.push(tr);
+
+  let std = getFirstSmiley();
+  let tb = getNthParent(std, 3);
+  if (tb != null) {
+    let newRows = [];
+    let title_index = 1;
+    for (let i = 0; i < links.length; i++) {
+      const row_e = links[i];
+      tb.appendChild(document.createElement("tr"));
+      let tr = document.createElement("tr");
+      for (let j = 0; j < row_e.length; j++) {
+        const col_e = row_e[j];
+        addTd(tr, col_e, title_index);
+        title_index++;
       }
-      resizeTds(newRows);
-
-      let tbl = getNthParent(std, 4);
-      if (tbl != null) {
-        table2 = tbl.cloneNode(true);
-
-        addSwitch(0, 1);
-
-        let ifr = window.top.document.querySelector('[name="shoutbox"]');
-        if (ifr != null) {
-          standardHeight = ifr.getAttribute("height");
-          ifr.setAttribute("height", newHeight);
-        }
-      }
+      tb.appendChild(tr);
+      newRows.push(tr);
     }
-  } else {
-    let std = document.querySelector('[title=":)"]');
-    let tbl = getNthParent(std, 4);
-    if (tbl != null) {
-      tbl.innerHTML = table2.innerHTML;
+    resizeTds(newRows);
+    addSwitch(0);
 
-      addSwitch(0, 1);
-
-      let ifr = window.top.document.querySelector('[name="shoutbox"]');
+    let ifr = window.top.document.querySelector('[name="shoutbox"]');
       if (ifr != null) {
         ifr.setAttribute("height", newHeight);
       }
     }
-  }
 }
 
 function hidePepe() {
-  if (table1 != null) {
-    let std = document.querySelector('[title=":)"]');
+  if (orgTable != null) {
+    let std = getFirstSmiley();
     let tbl = getNthParent(std, 4);
     if (tbl != null) {
-      tbl.innerHTML = table1.innerHTML;
-
-      addSwitch(1, 1);
+      tbl.innerHTML = orgTable.innerHTML;
+      addSwitch(1);
 
       let ifr = window.top.document.querySelector('[name="shoutbox"]');
       if (ifr != null) {
@@ -432,21 +586,24 @@ function addTd(tr, link, title) {
   tr.appendChild(td);
 }
 
-function addSwitch(mode, index) {
-  let std = document.querySelector('[title=":)"]');
+function addSwitch(mode) {
+  let std = getFirstSmiley();
   let tbl = getNthParent(std, 4);
   if (tbl != null) {
     let rows = tbl.rows;
-    let r = rows[index];
+    let r = rows[1];
+    while (r.cells.length > 30) {
+      r.deleteCell(-1);
+    }
     let c = r.insertCell(-1);
 
     let a = document.createElement("a");
     a.href = "#";
     if (mode == 0) {
-      a.text = "hide";
+      a.text = " hide ";
       a.addEventListener("click", hidePepe);
     } else {
-      a.text = "show";
+      a.text = " more ... ";
       a.addEventListener("click", showPepe);
     }
     c.appendChild(a);
