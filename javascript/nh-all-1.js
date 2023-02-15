@@ -424,7 +424,7 @@ const scalar = 1.1;
   "use strict";
   // (un)comment this line, if needed:
   swapInput();
-
+  removeHints();
   addPepe();
   add_4k();
   addSwitchStyle();
@@ -439,6 +439,14 @@ function swapInput() {
     let row2 = tbl.insertRow(-1);
     row2.innerHTML = row1.innerHTML;
   }
+}
+
+function removeHints() {
+    let std = getFirstSmiley();
+    let tbl = getNthParent(std, 7);
+    if (tbl != null && tbl.rows.length >= 1) {
+        tbl.rows[1].innerHTML = "<hr>";
+    }
 }
 
 function addPepe() {
