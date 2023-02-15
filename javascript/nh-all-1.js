@@ -78,7 +78,6 @@ let links = [
   ["https://newheaven.nl/files/imagecache/63733_pepe-070.gif", 28, 28],
   ["https://newheaven.nl/files/imagecache/63733_pepe-071.gif", 88, 19],
   ["https://newheaven.nl/files/imagecache/63733_pepe-072.gif", 48, 30],
-
   ["https://newheaven.nl/files/imagecache/63733_pepe-074.gif", 40, 25],
   ["https://newheaven.nl/files/imagecache/63733_pepe-075.gif", 18, 18],
   ["https://newheaven.nl/files/imagecache/63733_pepe-076.gif", 41, 40],
@@ -88,7 +87,6 @@ let links = [
   ["https://newheaven.nl/files/imagecache/63733_pepe-094.gif", 36, 26],
   ["https://newheaven.nl/files/imagecache/63733_pepe-109.gif", 32, 32],
   ["https://newheaven.nl/files/imagecache/63733_pepe-121.gif", 32, 32],
-
   ["https://newheaven.nl/files/imagecache/63733_pepe-123.gif", 32, 32],
   ["https://newheaven.nl/files/imagecache/63733_pepe-124.gif", 32, 32],
   ["https://newheaven.nl/files/imagecache/63733_pepe-125.gif", 32, 32],
@@ -130,7 +128,6 @@ let links = [
   ["https://newheaven.nl/files/imagecache/63733_pepe-161.gif", 64, 64],
   ["https://newheaven.nl/files/imagecache/63733_pepe-163.gif", 64, 64],
   ["https://newheaven.nl/files/imagecache/63733_pepe-164.gif", 64, 64],
-
   ["https://newheaven.nl/files/imagecache/63733_pepe-159.gif", 64, 64],
   ["https://newheaven.nl/files/imagecache/63837_piratenboot.gif", 140, 130],
   ["https://newheaven.nl/files/imagecache/60835_na6otob9r4t.gif", 23, 29],
@@ -370,10 +367,8 @@ let links = [
   ["https://newheaven.nl/themes/default/images/smilies/greedy.gif", 18, 18],
   ["https://newheaven.nl/themes/default/images/smilies/dumbells.gif", 32, 18],
   ["https://newheaven.nl/themes/default/images/smilies/clover.gif", 37, 32],
-
   ["https://newheaven.nl/themes/default/images/smilies/uglywoot.gif", 41, 46],
   ["https://newheaven.nl/themes/default/images/smilies/uangel.gif", 30, 23],
-
   ["https://newheaven.nl/themes/default/images/smilies/ustone.gif", 16, 15],
   ["https://newheaven.nl/themes/default/images/smilies/uzzz.gif", 16, 30],
   ["https://newheaven.nl/themes/default/images/smilies/usorry.gif", 50, 24],
@@ -382,14 +377,10 @@ let links = [
   ["https://newheaven.nl/themes/default/images/smilies/uwave.gif", 25, 16],
   ["https://newheaven.nl/themes/default/images/smilies/uno.gif", 32, 22],
   ["https://newheaven.nl/themes/default/images/smilies/urock.gif", 29, 25],
-
   ["https://newheaven.nl/themes/default/images/smilies/ulove.gif", 16, 25],
-
   ["https://newheaven.nl/themes/default/images/smilies/uball.gif", 25, 49],
   ["https://newheaven.nl/themes/default/images/smilies/ubuschmann.gif", 23, 34],
-
   ["https://newheaven.nl/themes/default/images/smilies/stockpieks.gif", 60, 20],
-
   [
     "https://newheaven.nl/themes/default/images/smilies/popoklatsch.gif",
     48,
@@ -413,6 +404,11 @@ let links = [
   ["https://newheaven.nl/themes/default/images/smilies/bbaby.gif", 15, 15],
   ["https://newheaven.nl/themes/default/images/smilies/pullcar.gif", 120, 38],
   // Add your own imgs here:
+  ["https://newheaven.nl/files/imagecache/63733_Bouncing_Kirby.gif", 28, 28],
+  ["https://newheaven.nl/files/imagecache/63733_Gary.gif", 28, 28],
+  ["https://newheaven.nl/files/imagecache/63733_Smoking.gif", 28, 28],
+  ["https://newheaven.nl/files/imagecache/63733_spongbob_party.gif", 28, 28],
+  ["https://newheaven.nl/files/imagecache/63733_Spongebob.gif", 28, 28],
 ];
 let orgTable = null;
 const standardHeight = 550;
@@ -479,19 +475,18 @@ function getHeight(link) {
 }
 
 function initLinks() {
-  console.log(links.length);
-
-  while (links.length % rowElements != 0) {
-    // Placeholder img:
+  const w = rowElements;
+  const h = Math.ceil(links.length / w);
+  console.log(w, h, links.length);
+  while (links.length < w * h) {
+    // Placeholder img (transparent):
     links.push([
-      "https://newheaven.nl/themes/default/images/smilies/smile1.gif",
+      "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==",
       18,
       18,
     ]);
   }
 
-  const w = rowElements;
-  const h = links.length / w;
   links.sort(function (a, b) {
     return getWidth(a) - getWidth(b);
   });
