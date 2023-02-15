@@ -374,7 +374,6 @@ let links = [
   ["https://newheaven.nl/themes/default/images/smilies/uglywoot.gif", 41, 46],
   ["https://newheaven.nl/themes/default/images/smilies/uangel.gif", 30, 23],
 
-
   ["https://newheaven.nl/themes/default/images/smilies/ustone.gif", 16, 15],
   ["https://newheaven.nl/themes/default/images/smilies/uzzz.gif", 16, 30],
   ["https://newheaven.nl/themes/default/images/smilies/usorry.gif", 50, 24],
@@ -384,15 +383,7 @@ let links = [
   ["https://newheaven.nl/themes/default/images/smilies/uno.gif", 32, 22],
   ["https://newheaven.nl/themes/default/images/smilies/urock.gif", 29, 25],
 
-
   ["https://newheaven.nl/themes/default/images/smilies/ulove.gif", 16, 25],
-
-
-
-
-
-
-
 
   ["https://newheaven.nl/themes/default/images/smilies/uball.gif", 25, 49],
   ["https://newheaven.nl/themes/default/images/smilies/ubuschmann.gif", 23, 34],
