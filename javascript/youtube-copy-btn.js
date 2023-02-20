@@ -9,12 +9,12 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-    'use strict';
-    var dummy = document.createElement("button");
-    dummy.innerHTML = "copy url";
-    dummy.addEventListener("click", function() {
-        navigator.clipboard.writeText(window.location.href);
-    });
-    document.getElementById("start").appendChild(dummy);
+(function () {
+  "use strict";
+  var dummy = document.createElement("button");
+  dummy.innerHTML = "copy url";
+  dummy.addEventListener("click", function () {
+    navigator.clipboard.writeText(window.location.href);
+  });
+  document.getElementById("start").appendChild(dummy);
 })();
