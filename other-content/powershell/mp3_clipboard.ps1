@@ -19,7 +19,7 @@ while ($i -gt 0) {
         Write-Output $CLIPBOARD_TEXT
         $VIDEOID = $Matches.1
         Write-Output $VIDEOID
-        yt-dlp.exe -f bestaudio -x --audio-format mp3 --audio-quality 0 "$VIDEOID"
+        yt-dlp.exe -f bestaudio -x --audio-format mp3 --audio-quality 320K -- $VIDEOID
     }
     $i--
     Start-Sleep -Seconds 3
