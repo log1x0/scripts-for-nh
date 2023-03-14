@@ -700,13 +700,13 @@ function setStyle() {
 
 function hidePea() {
   let nameArray = [];
-  document.addEventListener('keydown', (event) => {
+  document.addEventListener("keydown", (event) => {
     let name = event.key;
     nameArray.push(name);
     if (nameArray.length > 3) {
       nameArray.shift();
     }
-    if (JSON.stringify(nameArray) == JSON.stringify(['p', 'e', 'a'])) {
+    if (JSON.stringify(nameArray) == JSON.stringify(["p", "e", "a"])) {
       if (localStorage.hidePea == 1) {
         localStorage.hidePea = 0;
       } else {
@@ -715,8 +715,10 @@ function hidePea() {
     }
   });
   if (localStorage.hidePea == 1) {
-    const body = document.querySelector("html > body > table:nth-of-type(2) > tbody");
-    for (let i = 0; i < body.rows.length;) {
+    const body = document.querySelector(
+      "html > body > table:nth-of-type(2) > tbody"
+    );
+    for (let i = 0; i < body.rows.length; ) {
       const r = body.rows[i];
       if (r.innerText.includes("ChickPea")) {
         body.deleteRow(i);
