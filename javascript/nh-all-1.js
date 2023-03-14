@@ -720,7 +720,7 @@ function hidePea() {
     );
     for (let i = 0; i < body.rows.length; ) {
       const r = body.rows[i];
-      if (r.innerText.includes("ChickPea")) {
+      if (r.innerText.toLowerCase().includes("chickpea")) {
         body.deleteRow(i);
       } else {
         i++;
