@@ -389,6 +389,7 @@ const scalar = 1.1;
   addPepe();
   add_4k();
   addSwitchStyle();
+  hidePea();
 })();
 
 function swapInput() {
@@ -620,44 +621,6 @@ function getWidthImg(img) {
   return 30;
 }
 
-function rearrangeCells(rows) {
-  if (rows.length > 0) {
-    let w = rows[0].cells.length;
-    let h = rows.length;
-    let allCells = [];
-    for (let i = 0; i < h; i++) {
-      let cells = rows[i].cells;
-      for (let j = 0; j < cells.length; j++) {
-        allCells.push(cells[j]);
-      }
-    }
-    allCells.sort(function (a, b) {
-      return getWidthImg(a.firstChild) - getWidthImg(b.firstChild);
-    });
-    let newCells = [];
-    for (let i = 0; i < h; i++) {
-      for (let j = 0; j < w; j++) {
-        let idx = j * h + i;
-        if (idx < allCells.length) {
-          newCells.push(allCells[idx]);
-        }
-      }
-    }
-    for (let i = 0; i < h; i++) {
-      let r = rows[i];
-      while (r.cells.length > 0) {
-        r.deleteCell(-1);
-      }
-      for (let j = 0; j < w; j++) {
-        let c = r.insertCell(-1);
-        c.innerHTML = newCells[i * w + j].innerHTML;
-        c.style.textAlign = "center";
-        c.style.verticalAlign = "middle";
-      }
-    }
-  }
-}
-
 function add_4k() {
   document.querySelectorAll("img").forEach((e) => {
     if (e.src == "https://newheaven.nl/images/categories/9/2_109.gif") {
@@ -733,4 +696,33 @@ function setStyle() {
 
   // uncomment this, if the font size should be increased:
   // document.querySelectorAll("font, td").forEach(e => { e.style.fontSize = "9pt" });
+}
+
+function hidePea() {
+  let nameArray = [];
+  document.addEventListener('keydown', (event) => {
+    let name = event.key;
+    nameArray.push(name);
+    if (nameArray.length > 3) {
+      nameArray.shift();
+    }
+    if (JSON.stringify(nameArray) == JSON.stringify(['p', 'e', 'a'])) {
+      if (localStorage.hidePea == 1) {
+        localStorage.hidePea = 0;
+      } else {
+        localStorage.hidePea = 1;
+      }
+    }
+  });
+  if (localStorage.hidePea == 1) {
+    const body = document.querySelector("html > body > table:nth-of-type(2) > tbody");
+    for (let i = 0; i < body.rows.length;) {
+      const r = body.rows[i];
+      if (r.innerText.includes("ChickPea")) {
+        body.deleteRow(i);
+      } else {
+        i++;
+      }
+    }
+  }
 }
